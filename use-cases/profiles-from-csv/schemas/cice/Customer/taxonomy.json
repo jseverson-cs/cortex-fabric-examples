@@ -1,0 +1,60 @@
+{
+  "taxonomy": [
+    {
+      "name": "inferred",
+      "label": "Inferred",
+      "description": "Group of inferred attributes.",
+      "tags": [
+        "attr/inferred"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "observed",
+      "label": "Observed",
+      "description": "Group of observed attributes.",
+      "tags": [
+        "attr/observed"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "declared",
+      "label": "Declared",
+      "description": "Group of declared attributes.",
+      "tags": [
+        "attr/declared"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "assigned",
+      "label": "Assigned",
+      "description": "Group of assigned attributes.",
+      "tags": [
+        "attr/assigned"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "similarity",
+      "label": "Similarity",
+      "description": "Group of attributes expressing similarity.",
+      "parent": "inferred",
+      "tags": [
+        "inferrence/similarity"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "simulation",
+      "label": "Simulation",
+      "description": "Group of attributes expressing future expectations.",
+      "parent": "inferred",
+      "tags": [
+        "inferrence/forecasting"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    }
+  ]
+}

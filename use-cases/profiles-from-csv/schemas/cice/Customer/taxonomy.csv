@@ -1,0 +1,7 @@
+name,label,description,parent,tag1,tag2,tag3,tag4
+inferred,Inferred,Group of inferred attributes.,,attr/inferred,,,
+observed,Observed,Group of observed attributes.,,attr/observed,,,
+declared,Declared,Group of declared attributes.,,attr/declared,,,
+assigned,Assigned,Group of assigned attributes.,,attr/assigned,,,
+similarity,Similarity,Group of attributes expressing similarity.,inferred,inferrence/similarity,,,
+simulation,Simulation,Group of attributes expressing future expectations.,inferred,inferrence/forecasting,,,
