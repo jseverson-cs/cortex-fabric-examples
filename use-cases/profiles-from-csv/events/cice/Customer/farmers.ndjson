@@ -1,0 +1,5 @@
+{"event":"agent_number","entityId":"fake-agent","entityType":"default/agent","properties":{"value":"AGENT-1"}}
+{"event":"district_id","entityId":"fake-agent","entityType":"default/agent","properties":{"value":59}}
+{"event":"appointment_date","entityId":"fake-agent","entityType":"default/agent","properties":{"value":"1960-10-15T05:00:00+00:00"}}
+{"event":"count_docs_by_mime_type","entityId":"fake-agent","entityType":"default/agent","properties":{"value":[{"value":"PDF: 120"}]}}
+{"event":"count_docs_by_mime_type","entityId":"fake-agent","entityType":"default/agent","properties":{"value":[{"dimensionId":"PDF","dimensionValue":{"value":120,"context":"cortex/attribute-value-number"}},{"dimensionId":"WORD","dimensionValue":{"value":17,"context":"cortex/attribute-value-number"}}]}}

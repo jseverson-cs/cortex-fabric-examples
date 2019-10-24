@@ -1,8 +1,8 @@
 {
-  "name": "cice/Customer",
-  "title": "cice/Customer",
-  "profileType": "cice/Customer",
-  "description": "cice/Customer",
+  "name": "nbc/Viewer",
+  "title": "nbc/Viewer",
+  "profileType": "nbc/Viewer",
+  "description": "nbc/Viewer",
   "attributes": [
     {
       "description": "What zipcode does the viewer most likely view videos from?",
@@ -382,70 +382,6 @@
       "label": "type",
       "description": "type",
       "context": "cortex/profile-attribute-facet"
-    }
-  ],
-  "taxonomy": [
-    {
-      "name": "inferred",
-      "label": "Inferred",
-      "description": "Group of inferred attributes.",
-      "tags": [
-        "attr/inferred"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
-    },
-    {
-      "name": "observed",
-      "label": "Observed",
-      "description": "Group of observed attributes.",
-      "tags": [
-        "attr/observed"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
-    },
-    {
-      "name": "prefs",
-      "label": "Preferences",
-      "description": "Group of attributes capturing preferences.",
-      "parent": "inferred",
-      "tags": [
-        "attr/inferred",
-        "type/preference"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
-    },
-    {
-      "name": "tolerance",
-      "label": "Tolerance",
-      "description": "Group of attributes capturing tolerance.",
-      "parent": "inferred",
-      "tags": [
-        "attr/inferred",
-        "type/tolerance"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
-    },
-    {
-      "name": "searched",
-      "label": "Searches",
-      "description": "Group of attributes capturing searches.",
-      "parent": "observed",
-      "tags": [
-        "attr/observed",
-        "type/search"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
-    },
-    {
-      "name": "demographics",
-      "label": "Demographics",
-      "description": "Group of attributes capturing demographics.",
-      "parent": "inferred",
-      "tags": [
-        "attr/inferred",
-        "type/demographics"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
     }
   ]
 }

@@ -1,0 +1,16 @@
+CONDA_ENV := project-cice
+
+SCHEMA := cice/Customer
+PROFILE_ID := fake-bob
+
+IMPORT_FILES=import_files
+
+include Makefile
+
+import_files:
+	cp ${HOME}/Downloads/'CICE Profile Attributes - CustomerSchema.csv' ${SCHEMA_DIR}/schema.csv || true
+	cp ${HOME}/Downloads/'CICE Profile Attributes - Taxonomy.csv' ${SCHEMA_DIR}/taxonomy.csv || true
+	cp ${HOME}/Downloads/'CICE Profile Attributes - CustomerSamples.csv' ${EVENTS_DIR}/samples.csv || true
+
+cice:
+	make -f ${MAKEFILE_DIR}/Makefile upload SCHEMA=cice/Customer IMPORT_FILES=import_files_cice PROFILE_ID=fake-bob

@@ -1,0 +1,26 @@
+
+CONDA_ENV := project-cice
+
+SCHEMA := cice/Customer
+PROFILE_ID := fake-bob
+
+include Makefile
+
+import_files_nbc_viewer:
+	cp ${HOME}/Downloads/'NBC Profile Attributes - ViewerSchema.csv' ${SCHEMA_DIR}/schema.csv || true
+	cp ${HOME}/Downloads/'NBC Profile Attributes - ViewerSamples.csv' ${EVENTS_DIR}/samples.csv || true
+	cp ${HOME}/Downloads/'NBC Profile Attributes - Taxonomy.csv' ${SCHEMA_DIR}/taxonomy.csv || true
+
+import_files_nbc_segment:
+	cp ${HOME}/Downloads/'NBC Profile Attributes - SegmentSchema.csv' ${SCHEMA_DIR}/schema.csv || true
+	cp ${HOME}/Downloads/'NBC Profile Attributes - SegmentSamples.csv' ${EVENTS_DIR}/samples.csv || true
+	cp ${HOME}/Downloads/'NBC Profile Attributes - Taxonomy.csv' ${SCHEMA_DIR}/taxonomy.csv || true
+
+nbc.viewer: import_files_nbc_viewer upload
+	make -f ${MAKEFILE_DIR}/Makefile-nbc upload SCHEMA=nbc/Viewer PROFILE_ID=viewer-1 IMPORT_FILES=import_files_nbc_viewer
+
+nbc.segment: import_files_nbc_segment upload
+	make -f ${MAKEFILE_DIR}/Makefile-nbc upload SCHEMA=nbc/ViewerSegment PROFILE_ID=segment-1 IMPORT_FILES=import_files_nbc_segment
+
+nbc: nbc.viewer nbc.segment
+

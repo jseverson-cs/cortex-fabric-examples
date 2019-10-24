@@ -1,8 +1,8 @@
 {
-  "name": "cice/Customer",
-  "title": "cice/Customer",
-  "profileType": "cice/Customer",
-  "description": "cice/Customer",
+  "name": "nbc/Viewer",
+  "title": "nbc/Viewer",
+  "profileType": "nbc/Viewer",
+  "description": "nbc/Viewer",
   "attributes": [
     {
       "description": "What zipcode does the viewer most likely view videos from?",
