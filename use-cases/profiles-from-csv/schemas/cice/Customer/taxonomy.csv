@@ -1,7 +1,7 @@
 name,label,description,parent,tag1,tag2,tag3,tag4
 inferred,Inferred,Group of inferred attributes.,,attr/inferred,,,
 observed,Observed,Group of observed attributes.,,attr/observed,,,
-prefs,Preferences,Group of attributes capturing preferences.,inferred,attr/inferred,type/preference,,
-tolerance,Tolerance,Group of attributes capturing tolerance.,inferred,attr/inferred,type/tolerance,,
-searched,Searches,Group of attributes capturing searches.,observed,attr/observed,type/search,,
-demographics,Demographics,Group of attributes capturing demographics.,inferred,attr/inferred,type/demographics,,
+declared,Declared,Group of declared attributes.,,attr/declared,,,
+assigned,Assigned,Group of assigned attributes.,,attr/assigned,,,
+similarity,Similarity,Group of attributes expressing similarity.,inferred,inferrence/similarity,,,
+simulation,Simulation,Group of attributes expressing future expectations.,inferred,inferrence/forecasting,,,

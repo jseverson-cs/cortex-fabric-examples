@@ -17,7 +17,7 @@ dirs:
 
 deps: dirs ${IMPORT_FILES}
 	@echo 'Schema must live here: ${SCHEMA_DIR}/schema.csv' && test -f '${SCHEMA_DIR}/schema.csv'
-	@echo 'Sample Events must live here: ${SCHEMA_DIR}/samples.csv' && test -f '${SCHEMA_DIR}/schema.csv'
+	@echo 'Sample Events must live here: ${EVENTS_DIR}/samples.csv' && test -f '${EVENTS_DIR}/samples.csv'
 
 from_csv_schema_to_json_schema: deps
 	csvjson '${SCHEMA_DIR}/schema.csv' \

@@ -5,8 +5,354 @@
   "description": "cice/Customer",
   "attributes": [
     {
-      "description": "What zipcode does the viewer most likely view videos from?",
-      "label": "Likely Zipcode",
+      "description": "Name of the Customer",
+      "label": "Name",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/declared"
+      ],
+      "name": "name"
+    },
+    {
+      "description": "Age of the Customer",
+      "label": "Age",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-total",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/declared"
+      ],
+      "name": "age"
+    },
+    {
+      "description": "Age Group of the Customer",
+      "label": "Age Group",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/observed"
+      ],
+      "name": "age.group"
+    },
+    {
+      "description": "Gmail Id",
+      "label": "accounts.gmail",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/declared"
+      ],
+      "name": "accounts.gmail"
+    },
+    {
+      "description": "Facebook Id",
+      "label": "accounts.facebook",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/declared"
+      ],
+      "name": "accounts.facebook"
+    },
+    {
+      "description": "Instagram Id",
+      "label": "accounts.instagram",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/declared"
+      ],
+      "name": "accounts.instagram"
+    },
+    {
+      "description": "Date of Birth of the person",
+      "label": "DOB",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-datetime",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/declared"
+      ],
+      "name": "DOB"
+    },
+    {
+      "description": "Last visit to one of the CICE store",
+      "label": "Last Store Visit",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-datetime",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/observed"
+      ],
+      "name": "stores.lastVisit.anyLocation"
+    },
+    {
+      "description": "Last visit CICE store in Round Rock",
+      "label": "Last RR Location",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-datetime",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/observed"
+      ],
+      "name": "stores.lastVisit.RR"
+    },
+    {
+      "description": "How many times has the Customer visited each of the CICE Locations last week?",
+      "label": "Last Week's Visit Per Location",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cice/Store",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/observed"
+      ],
+      "name": "stores.visitsLastWeek.perLocation"
+    },
+    {
+      "description": "How many times do we think the Customer will visit each of the CICE Locations next week?",
+      "label": "Future Visit Per Location",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cice/Store",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/inferred",
+        "inferrence/forecasting"
+      ],
+      "name": "stores.visitsNextWeek.perLocation"
+    },
+    {
+      "description": "Is the customer subscribed for Deals, Discounts and More?",
+      "label": "Subscribed to Weekly Offers?",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-boolean",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/declared"
+      ],
+      "name": "weeklyOffers.subscribed"
+    },
+    {
+      "description": "Do we think the customer will try this week's Ice Cream Offer?",
+      "label": "Will try this Week's Offer?",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-boolean",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/inferred",
+        "inferrence/forecasting"
+      ],
+      "name": "thisWeeksOffer.willTry"
+    },
+    {
+      "description": "On average, how much does the customer spend per visit?",
+      "label": "Average Spending Per Visit",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-statsummary",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/observed"
+      ],
+      "name": "visit.averageSpent"
+    },
+    {
+      "description": "On average, how many items does the customer purchase per visit?",
+      "label": "Average # of Items Purchased Per Visit",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-statsummary",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/observed"
+      ],
+      "name": "visit.averageItemsPurchased"
+    },
+    {
+      "description": "How many times has the customer visited any of our locations each month?",
+      "label": "Visits Per Month",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-datetime",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/observed"
+      ],
+      "name": "visit.count.perMonth"
+    },
+    {
+      "description": "How many times on average does the customer visit each of locations per month?",
+      "label": "Visits Per Month",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-datetime",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-statsummary",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/observed",
+        "support/future"
+      ],
+      "name": "visit.average.perMonth.perLocation"
+    },
+    {
+      "description": "How many kids does the customer have?",
+      "label": "# of Kids",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/declared"
+      ],
+      "name": "kids.count"
+    },
+    {
+      "description": "What is the customers favortie flavors?",
+      "label": "Favorite Flavors",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cice/Flavor",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/declared"
+      ],
+      "name": "flavors.favorite"
+    },
+    {
+      "description": "What flavors does the customer not like?",
+      "label": "Distasteful Flavors",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/declared"
+      ],
+      "name": "flavors.distaste"
+    },
+    {
+      "description": "What are the customers favorite add ons per flavor?",
+      "label": "Favorite AddOns Per Flavor",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-datetime",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/declared",
+        "support/future"
+      ],
+      "name": "addOns.favorite.perFlavor"
+    },
+    {
+      "description": "What allergies does the customer have?",
+      "label": "Allergies",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cice/Allergy",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/declared"
+      ],
+      "name": "allergies"
+    },
+    {
+      "description": "What flavors would we like to recommend to the customer? ... And how likely is the customer in liking the flavor?",
+      "label": "Recommended Flavors",
       "type": "cortex/attributes-inferred",
       "valueType": {
         "outerType": "cortex/attribute-value-list",
@@ -18,311 +364,225 @@
         ]
       },
       "tags": [
-        "attr/inferred",
-        "type/demographics"
+        "attr/inferred"
       ],
-      "name": "likely.zipcode"
+      "name": "flavors.recommended"
     },
     {
-      "description": "What is the users likely income?",
-      "label": "Likely Income",
-      "type": "cortex/attributes-inferred",
+      "description": "What is the general calorie range of the itmes the customer purchases?",
+      "label": "Calorie Range",
+      "type": "cortex/attributes-observed",
       "valueType": {
-        "outerType": "cortex/attribute-value-number",
+        "outerType": "cortex/attribute-value-total",
         "innerTypes": []
       },
       "tags": [
-        "attr/inferred",
-        "type/demographics"
+        "attr/observed",
+        "support/future"
       ],
-      "name": "likely.income"
+      "name": "calorie.limits"
     },
     {
-      "description": "What is the users likely age group?",
-      "label": "Likely Age Group",
+      "description": "How many positive reviews has the user left on social media?",
+      "label": "Positive Reviews",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-total",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/observed"
+      ],
+      "name": "reviews.count.positive"
+    },
+    {
+      "description": "How many negative reviews has the user left on social media?",
+      "label": "Negative Reviews",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-total",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/observed"
+      ],
+      "name": "reviews.count.negative"
+    },
+    {
+      "description": "How many total times has the customer visited any of our shops?",
+      "label": "Total Visits",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-total",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/observed"
+      ],
+      "name": "visits.total"
+    },
+    {
+      "description": "What location do we believe the customer prreffers?",
+      "label": "Preferred Location",
       "type": "cortex/attributes-inferred",
       "valueType": {
         "outerType": "cortex/attribute-value-string",
         "innerTypes": []
       },
       "tags": [
-        "attr/inferred",
-        "type/demographics"
+        "attr/inferred"
       ],
-      "name": "likely.ageGroup"
+      "name": "location.prefered"
     },
     {
-      "description": "What genres is the user likely to watch next?",
-      "label": "Genre Preferences",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-list",
-        "innerTypes": [
-          {
-            "outerType": "cortex/attribute-value-string",
-            "innerTypes": []
-          }
-        ]
-      },
-      "tags": [
-        "attr/inferred",
-        "type/preference"
-      ],
-      "name": "preferences.genre"
-    },
-    {
-      "description": "What genres is the user likely to watch in the morning?",
-      "label": "Morning Genre Preferences",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-list",
-        "innerTypes": [
-          {
-            "outerType": "cortex/attribute-value-string",
-            "innerTypes": []
-          }
-        ]
-      },
-      "tags": [
-        "attr/inferred",
-        "type/preference"
-      ],
-      "name": "preferences.genre.morning"
-    },
-    {
-      "description": "What genres is the user likely to watch in the evening?",
-      "label": "Evening Genre Preferences",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-list",
-        "innerTypes": [
-          {
-            "outerType": "cortex/attribute-value-string",
-            "innerTypes": []
-          }
-        ]
-      },
-      "tags": [
-        "attr/inferred",
-        "type/preference"
-      ],
-      "name": "preferences.genre.evening"
-    },
-    {
-      "description": "What shows is the user likely to watch next?",
-      "label": "Show Preferences",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-list",
-        "innerTypes": [
-          {
-            "outerType": "cortex/attribute-value-string",
-            "innerTypes": []
-          }
-        ]
-      },
-      "tags": [
-        "attr/inferred",
-        "type/preference"
-      ],
-      "name": "preferences.shows"
-    },
-    {
-      "description": "What shows is the user likely to watch in the morning?",
-      "label": "Morning Show Preferences",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-list",
-        "innerTypes": [
-          {
-            "outerType": "cortex/attribute-value-string",
-            "innerTypes": []
-          }
-        ]
-      },
-      "tags": [
-        "attr/inferred",
-        "type/preference"
-      ],
-      "name": "preferences.shows.morning"
-    },
-    {
-      "description": "What shows is the user likely to watch in the evening?",
-      "label": "Evening Show Preferences",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-list",
-        "innerTypes": [
-          {
-            "outerType": "cortex/attribute-value-string",
-            "innerTypes": []
-          }
-        ]
-      },
-      "tags": [
-        "attr/inferred",
-        "type/preference"
-      ],
-      "name": "preferences.shows.evening"
-    },
-    {
-      "description": "What platform is the user most likely to watch videos from?",
-      "label": "Platform",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-list",
-        "innerTypes": [
-          {
-            "outerType": "cortex/attribute-value-string",
-            "innerTypes": []
-          }
-        ]
-      },
-      "tags": [
-        "attr/inferred",
-        "type/preference"
-      ],
-      "name": "preferences.platforms"
-    },
-    {
-      "description": "How many ad pods is the user likely to tolerate per genre?",
-      "label": "Ads Watched",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-list",
-        "innerTypes": [
-          {
-            "outerType": "cortex/attribute-value-string",
-            "innerTypes": []
-          }
-        ]
-      },
-      "tags": [
-        "attr/inferred",
-        "type/tolerance"
-      ],
-      "name": "adToleranace.perGenre"
-    },
-    {
-      "description": "How likely is the user to tolerate ads displayed in the mid roll phase of a video?",
-      "label": "Mid Roll Ad Tolerance",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-weight",
-        "innerTypes": []
-      },
-      "tags": [
-        "attr/inferred",
-        "type/tolerance"
-      ],
-      "name": "adToleranace.midRoll"
-    },
-    {
-      "description": "How likely is the user to tolerate ads displayed in the pre roll phase of a video?",
-      "label": "Pre Roll Ad Tolerance",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-weight",
-        "innerTypes": []
-      },
-      "tags": [
-        "attr/inferred",
-        "type/tolerance"
-      ],
-      "name": "adToleranace.preRoll"
-    },
-    {
-      "description": "How likely is the user to tolerate ads displayed in shows they are hooked on?",
-      "label": "Ad Tolerance on Hooked on Shows",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-weight",
-        "innerTypes": []
-      },
-      "tags": [
-        "attr/inferred",
-        "type/tolerance"
-      ],
-      "name": "adTolerance.hookedOnShows"
-    },
-    {
-      "description": "What shows did the viewer search for?",
-      "label": "Shows Searched",
+      "description": "What flavors does the customer most prefer blending together?",
+      "label": "Favorite Blend",
       "type": "cortex/attributes-observed",
       "valueType": {
-        "outerType": "cortex/attribute-value-list",
+        "outerType": "cortex/attribute-value-dimensional",
         "innerTypes": [
           {
-            "outerType": "cortex/attribute-value-string",
+            "outerType": "cice/flavor",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-percentage",
             "innerTypes": []
           }
         ]
       },
       "tags": [
-        "attr/observed",
-        "type/search"
+        "attr/observed"
       ],
-      "name": "shows.searchedFor"
+      "name": "blend.MostFavorite"
     },
     {
-      "description": "What genres did the viewer search for?",
-      "label": "Genres Searched",
+      "description": "Who is this customer's children?",
+      "label": "Kids",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/profile-link",
+            "innerTypes": [
+              {
+                "outerType": "cice/Customer",
+                "innerTypes": []
+              }
+            ]
+          }
+        ]
+      },
+      "tags": [
+        "attr/declared"
+      ],
+      "name": "kids"
+    },
+    {
+      "description": "Who is this customer's spouse?",
+      "label": "Spouse",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-profile-rel",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/declared"
+      ],
+      "name": "spouse"
+    },
+    {
+      "description": "How many times has this customer visited our stored with other customers?",
+      "label": "Visits with Other Customers",
       "type": "cortex/attributes-observed",
       "valueType": {
-        "outerType": "cortex/attribute-value-list",
+        "outerType": "cortex/attribute-value-dimensional",
         "innerTypes": [
           {
-            "outerType": "cortex/attribute-value-string",
+            "outerType": "cortex/profile-link",
+            "innerTypes": [
+              {
+                "outerType": "cice/Customer",
+                "innerTypes": []
+              }
+            ]
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
             "innerTypes": []
           }
         ]
       },
       "tags": [
-        "attr/observed",
-        "type/search"
+        "attr/observed"
       ],
-      "name": "genres.searchedFor"
+      "name": "visits.withFriends.perFriend"
     },
     {
-      "description": "What shows is the viewer hooked on?",
-      "label": "Hooked On",
+      "description": "What customers does this customer resemble from a taste pallete perspective? and how much?",
+      "label": "Shares Taste Prefs with Customers",
       "type": "cortex/attributes-inferred",
       "valueType": {
-        "outerType": "cortex/attribute-value-list",
+        "outerType": "cortex/attribute-value-dimensional",
         "innerTypes": [
           {
-            "outerType": "cortex/attribute-value-string",
+            "outerType": "cortex/profile-link",
+            "innerTypes": [
+              {
+                "outerType": "cice/Customer",
+                "innerTypes": []
+              }
+            ]
+          },
+          {
+            "outerType": "cortex/attribute-value-weight",
             "innerTypes": []
           }
         ]
       },
       "tags": [
         "attr/inferred",
-        "type/preference"
+        "inferrence/similarity"
       ],
-      "name": "shows.hookedOn"
+      "name": "customers.similarTastePreference"
     },
     {
-      "description": "How likely do we believe the viewer will be intersted in specific ads? (Based on what they view/search for)",
-      "label": "Ads of Interest",
+      "description": "How many items is a customer likely to purchase if they visit with a particular friend?",
+      "label": "Purchases with Other Customers",
       "type": "cortex/attributes-inferred",
       "valueType": {
-        "outerType": "cortex/attribute-value-list",
+        "outerType": "cortex/attribute-value-dimensional",
         "innerTypes": [
           {
-            "outerType": "cortex/attribute-value-string",
+            "outerType": "cortex/profile-link",
+            "innerTypes": [
+              {
+                "outerType": "cice/Customer",
+                "innerTypes": []
+              }
+            ]
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
             "innerTypes": []
           }
         ]
       },
       "tags": [
         "attr/inferred",
-        "type/preference"
+        "inferrence/forecasting"
       ],
-      "name": "potentialInterest.ads"
+      "name": "items.likelyToPurchase.whenVisitingWith"
     }
   ],
   "attributeTags": [
+    {
+      "name": "attr/declared",
+      "label": "declared",
+      "description": "attr/declared",
+      "context": "cortex/profile-attribute-tag"
+    },
     {
       "name": "attr/inferred",
       "label": "inferred",
@@ -336,33 +596,28 @@
       "context": "cortex/profile-attribute-tag"
     },
     {
-      "name": "type/demographics",
-      "label": "demographics",
-      "description": "type/demographics",
+      "name": "inferrence/forecasting",
+      "label": "forecasting",
+      "description": "inferrence/forecasting",
       "context": "cortex/profile-attribute-tag"
     },
     {
-      "name": "type/preference",
-      "label": "preference",
-      "description": "type/preference",
+      "name": "inferrence/similarity",
+      "label": "similarity",
+      "description": "inferrence/similarity",
       "context": "cortex/profile-attribute-tag"
     },
     {
-      "name": "type/search",
-      "label": "search",
-      "description": "type/search",
-      "context": "cortex/profile-attribute-tag"
-    },
-    {
-      "name": "type/tolerance",
-      "label": "tolerance",
-      "description": "type/tolerance",
+      "name": "support/future",
+      "label": "future",
+      "description": "support/future",
       "context": "cortex/profile-attribute-tag"
     }
   ],
   "facets": [
     {
       "tags": [
+        "attr/declared",
         "attr/inferred",
         "attr/observed"
       ],
@@ -373,14 +628,21 @@
     },
     {
       "tags": [
-        "type/demographics",
-        "type/preference",
-        "type/search",
-        "type/tolerance"
+        "inferrence/forecasting",
+        "inferrence/similarity"
       ],
-      "name": "type",
-      "label": "type",
-      "description": "type",
+      "name": "inferrence",
+      "label": "inferrence",
+      "description": "inferrence",
+      "context": "cortex/profile-attribute-facet"
+    },
+    {
+      "tags": [
+        "support/future"
+      ],
+      "name": "support",
+      "label": "support",
+      "description": "support",
       "context": "cortex/profile-attribute-facet"
     }
   ],
@@ -404,46 +666,40 @@
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "prefs",
-      "label": "Preferences",
-      "description": "Group of attributes capturing preferences.",
-      "parent": "inferred",
+      "name": "declared",
+      "label": "Declared",
+      "description": "Group of declared attributes.",
       "tags": [
-        "attr/inferred",
-        "type/preference"
+        "attr/declared"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "tolerance",
-      "label": "Tolerance",
-      "description": "Group of attributes capturing tolerance.",
-      "parent": "inferred",
+      "name": "assigned",
+      "label": "Assigned",
+      "description": "Group of assigned attributes.",
       "tags": [
-        "attr/inferred",
-        "type/tolerance"
+        "attr/assigned"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "searched",
-      "label": "Searches",
-      "description": "Group of attributes capturing searches.",
-      "parent": "observed",
+      "name": "similarity",
+      "label": "Similarity",
+      "description": "Group of attributes expressing similarity.",
+      "parent": "inferred",
       "tags": [
-        "attr/observed",
-        "type/search"
+        "inferrence/similarity"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "demographics",
-      "label": "Demographics",
-      "description": "Group of attributes capturing demographics.",
+      "name": "simulation",
+      "label": "Simulation",
+      "description": "Group of attributes expressing future expectations.",
       "parent": "inferred",
       "tags": [
-        "attr/inferred",
-        "type/demographics"
+        "inferrence/forecasting"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     }

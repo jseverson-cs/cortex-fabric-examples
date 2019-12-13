@@ -1,8 +1,8 @@
 
-CONDA_ENV := project-cice
+CONDA_ENV := project-nbc
 
-SCHEMA := cice/Customer
-PROFILE_ID := fake-bob
+SCHEMA := nbc/Viewer
+PROFILE_ID := viewer-1
 
 include Makefile
 

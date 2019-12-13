@@ -1,5 +1,5 @@
 attributeKey,description,label,type,valueType,innerType1,innerType2,LinkToOtherProfiles,tag1,tag2,tag3,tag4
-likely.zipcode,What zipcode does the viewer most likely view videos from?,Likely Zipcode,inferred,list,string,,FALSE,attr/inferred,type/demographics,,
+likely.location,What city does the viewer most likely view videos from?,Likely City,observed,string,,,FALSE,attr/observed,type/demographics,,
 likely.income,What is the users likely income?,Likely Income,inferred,number,,,FALSE,attr/inferred,type/demographics,,
 likely.ageGroup,What is the users likely age group?,Likely Age Group,inferred,string,,,FALSE,attr/inferred,type/demographics,,
 preferences.genre,What genres is the user likely to watch next?,Genre Preferences,inferred,list,string,,FALSE,attr/inferred,type/preference,,
@@ -17,3 +17,6 @@ shows.searchedFor,What shows did the viewer search for?,Shows Searched,observed,
 genres.searchedFor,What genres did the viewer search for?,Genres Searched,observed,list,string,,FALSE,attr/observed,type/search,,
 shows.hookedOn,What shows is the viewer hooked on?,Hooked On,inferred,list,string,,FALSE,attr/inferred,type/preference,,
 potentialInterest.ads,How likely do we believe the viewer will be intersted in specific ads? (Based on what they view/search for),Ads of Interest,inferred,list,string,,FALSE,attr/inferred,type/preference,,
+preferences.genre.daily,What genres is the user likely to watch at different times of day?,Daily Genre Preferences,inferred,list,string,,FALSE,attr/inferred,type/preference,,
+likely.zipCode,What is the likely zip code of the user?,Likely Zip Code,observed,string,,,FALSE,attr/observed,type/demographics,,
+likely.median.income,What is the median income of the user?,Likely Median Income,inferred,number,,,FALSE,attr/inferred,type/demographics,,

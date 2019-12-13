@@ -19,46 +19,40 @@
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "prefs",
-      "label": "Preferences",
-      "description": "Group of attributes capturing preferences.",
-      "parent": "inferred",
+      "name": "declared",
+      "label": "Declared",
+      "description": "Group of declared attributes.",
       "tags": [
-        "attr/inferred",
-        "type/preference"
+        "attr/declared"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "tolerance",
-      "label": "Tolerance",
-      "description": "Group of attributes capturing tolerance.",
-      "parent": "inferred",
+      "name": "assigned",
+      "label": "Assigned",
+      "description": "Group of assigned attributes.",
       "tags": [
-        "attr/inferred",
-        "type/tolerance"
+        "attr/assigned"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "searched",
-      "label": "Searches",
-      "description": "Group of attributes capturing searches.",
-      "parent": "observed",
+      "name": "similarity",
+      "label": "Similarity",
+      "description": "Group of attributes expressing similarity.",
+      "parent": "inferred",
       "tags": [
-        "attr/observed",
-        "type/search"
+        "inferrence/similarity"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "demographics",
-      "label": "Demographics",
-      "description": "Group of attributes capturing demographics.",
+      "name": "simulation",
+      "label": "Simulation",
+      "description": "Group of attributes expressing future expectations.",
       "parent": "inferred",
       "tags": [
-        "attr/inferred",
-        "type/demographics"
+        "inferrence/forecasting"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     }

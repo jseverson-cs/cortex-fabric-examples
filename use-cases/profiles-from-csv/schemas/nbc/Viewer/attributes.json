@@ -5,23 +5,18 @@
   "description": "nbc/Viewer",
   "attributes": [
     {
-      "description": "What zipcode does the viewer most likely view videos from?",
-      "label": "Likely Zipcode",
-      "type": "cortex/attributes-inferred",
+      "description": "What city does the viewer most likely view videos from?",
+      "label": "Likely City",
+      "type": "cortex/attributes-observed",
       "valueType": {
-        "outerType": "cortex/attribute-value-list",
-        "innerTypes": [
-          {
-            "outerType": "cortex/attribute-value-string",
-            "innerTypes": []
-          }
-        ]
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
       },
       "tags": [
-        "attr/inferred",
+        "attr/observed",
         "type/demographics"
       ],
-      "name": "likely.zipcode"
+      "name": "likely.location"
     },
     {
       "description": "What is the users likely income?",
@@ -320,6 +315,53 @@
         "type/preference"
       ],
       "name": "potentialInterest.ads"
+    },
+    {
+      "description": "What genres is the user likely to watch at different times of day?",
+      "label": "Daily Genre Preferences",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/inferred",
+        "type/preference"
+      ],
+      "name": "preferences.genre.daily"
+    },
+    {
+      "description": "What is the likely zip code of the user?",
+      "label": "Likely Zip Code",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/observed",
+        "type/demographics"
+      ],
+      "name": "likely.zipCode"
+    },
+    {
+      "description": "What is the median income of the user?",
+      "label": "Likely Median Income",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/inferred",
+        "type/demographics"
+      ],
+      "name": "likely.median.income"
     }
   ],
   "attributeTags": [
