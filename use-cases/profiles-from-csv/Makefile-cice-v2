@@ -1,0 +1,13 @@
+CONDA_ENV := project-cice
+
+SCHEMA := cice/Customer
+IMPORT_FILES=import_files
+include Makefile
+PROFILE_TYPE := cortex/person
+SCHEMA_DIR := ${MAKEFILE_DIR}/schemas/v2-${SCHEMA}
+EVENTS_DIR := ${MAKEFILE_DIR}/events/v2-${SCHEMA}
+
+import_files:
+	cp ${HOME}/Downloads/'CICE Profile Attributes - CustomerSchemaV2.csv' ${SCHEMA_DIR}/schema.csv || true
+
+cice: upload_schemas

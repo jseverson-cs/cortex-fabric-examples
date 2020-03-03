@@ -3,6 +3,7 @@ MAKEFILE_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 SCHEMA_DIR := ${MAKEFILE_DIR}/schemas/${SCHEMA}
 EVENTS_DIR := ${MAKEFILE_DIR}/events/${SCHEMA}
+PROFILE_TYPE := ${SCHEMA}
 
 activate:
 	@echo "conda activate --stack ${CONDA_ENV}"
@@ -15,23 +16,25 @@ dirs:
 	mkdir -p ${SCHEMA_DIR}
 	mkdir -p ${EVENTS_DIR}
 
-deps: dirs ${IMPORT_FILES}
+schema_deps: dirs ${IMPORT_FILES}
 	@echo 'Schema must live here: ${SCHEMA_DIR}/schema.csv' && test -f '${SCHEMA_DIR}/schema.csv'
+
+event_deps: dirs ${IMPORT_FILES}
 	@echo 'Sample Events must live here: ${EVENTS_DIR}/samples.csv' && test -f '${EVENTS_DIR}/samples.csv'
 
-from_csv_schema_to_json_schema: deps
+from_csv_schema_to_json_schema: schema_deps
 	csvjson '${SCHEMA_DIR}/schema.csv' \
-		| jq --arg schema "${SCHEMA}" -f 'schema-from-excel-structure.jq' \
+		| jq --arg schema "${SCHEMA}" --arg profileType "${PROFILE_TYPE}"  -f 'schema-from-excel-structure.jq' \
 		> ${SCHEMA_DIR}/attributes.json
-	csvjson '${SCHEMA_DIR}/taxonomy.csv' \
+	(test -f '${SCHEMA_DIR}/taxonomy.csv' && csvjson '${SCHEMA_DIR}/taxonomy.csv' \
 		| jq --arg schema "${SCHEMA}" -f 'taxonomy-from-excel-structure.jq' \
-		> ${SCHEMA_DIR}/taxonomy.json
+		> ${SCHEMA_DIR}/taxonomy.json) || (cp ${MAKEFILE_DIR}/default-taxonomy.json ${SCHEMA_DIR}/taxonomy.json)
 	jq -s '.[0] + .[1]' \
 		<(cat ${SCHEMA_DIR}/attributes.json ) \
 		<(cat ${SCHEMA_DIR}/taxonomy.json ) \
 		> ${SCHEMA_DIR}/schema.json
 
-from_csv_profiles_to_json_profiles: deps
+from_csv_profiles_to_json_profiles: event_deps
 	csvjson '${EVENTS_DIR}/samples.csv' \
 		| jq -c 'include "cortex-schema-helpers"; .[] | cast_record_values_to_json ' \
 		> ${EVENTS_DIR}/samples.json
