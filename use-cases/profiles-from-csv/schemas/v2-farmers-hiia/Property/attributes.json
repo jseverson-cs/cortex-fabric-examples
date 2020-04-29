@@ -1,0 +1,258 @@
+{
+  "name": "farmers-hiia/Property",
+  "title": "farmers-hiia/Property",
+  "profileType": "farmers-hiia/Property",
+  "description": "farmers-hiia/Property",
+  "attributes": [
+    {
+      "description": "What agents have every filed a policy for this property?",
+      "label": "Policy Agents",
+      "type": "cortex/attributes-assigned",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/profile-link",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "underwritting/policy",
+        "attr/assigned"
+      ],
+      "name": "policy.agents"
+    },
+    {
+      "description": "What legal entities have ever insured this property?",
+      "label": "Policy Insured",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "underwritting/policy",
+        "attr/declared"
+      ],
+      "name": "policy.insured"
+    },
+    {
+      "description": "What investigators have every examined this property?",
+      "label": "Policy Investigators",
+      "type": "cortex/attributes-assigned",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "underwritting/policy",
+        "attr/observed"
+      ],
+      "name": "policy.investigators"
+    },
+    {
+      "description": "How many times has a policy been canceled on this property?",
+      "label": "Policy Cancelations",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "underwritting/policy",
+        "attr/observed"
+      ],
+      "name": "policy.cancelations"
+    },
+    {
+      "description": "What are the unique images of this property accross policies it has been part of?",
+      "label": "Policy Images",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "underwritting/policy",
+        "attr/observed"
+      ],
+      "name": "policy.images"
+    },
+    {
+      "description": "What discounts have ever been associated with policies regarding this propery?",
+      "label": "Policy Discounts",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "underwritting/policy",
+        "attr/declared"
+      ],
+      "name": "policy.discounts"
+    },
+    {
+      "description": "What images have been submitted with regards to the property's roof?",
+      "label": "Roof Images",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "part/roof",
+        "attr/declared"
+      ],
+      "name": "roof.images"
+    },
+    {
+      "description": "Has a hazard on the roof been detected?",
+      "label": "Roof Hazard Detected",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-boolean",
+        "innerTypes": []
+      },
+      "tags": [
+        "part/roof",
+        "attr/inferred"
+      ],
+      "name": "roof.hazardDetected"
+    },
+    {
+      "description": "What type of hazard has been detected on the roof?",
+      "label": "Roof Hazard Type",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "part/roof",
+        "attr/inferred"
+      ],
+      "name": "roof.hazardType"
+    },
+    {
+      "description": "How significant are the roof's hazard(s)?",
+      "label": "Roof Hazard Score",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-weight",
+        "innerTypes": []
+      },
+      "tags": [
+        "part/roof",
+        "attr/inferred"
+      ],
+      "name": "roof.hazardScore"
+    },
+    {
+      "description": "How many times have investigators found descrepencies with regards to this property's policies?",
+      "label": "Investigation Discrepencies",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "underwritting/investigation",
+        "attr/observed"
+      ],
+      "name": "investigation.discrepencies"
+    },
+    {
+      "description": "How many times have we detected agents engaging in fraudulent behavior with regards to this property?",
+      "label": "Fraud Detected",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "underwritting/investigation",
+        "attr/observed"
+      ],
+      "name": "investigation.agentFraudDetected"
+    }
+  ],
+  "attributeTags": [
+    {
+      "name": "attr/assigned",
+      "label": "assigned",
+      "description": "attr/assigned",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "attr/declared",
+      "label": "declared",
+      "description": "attr/declared",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "attr/inferred",
+      "label": "inferred",
+      "description": "attr/inferred",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "attr/observed",
+      "label": "observed",
+      "description": "attr/observed",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "part/roof",
+      "label": "roof",
+      "description": "part/roof",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "underwritting/investigation",
+      "label": "investigation",
+      "description": "underwritting/investigation",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "underwritting/policy",
+      "label": "policy",
+      "description": "underwritting/policy",
+      "context": "cortex/profile-attribute-tag"
+    }
+  ],
+  "facets": [
+    {
+      "tags": [
+        "attr/assigned",
+        "attr/declared",
+        "attr/inferred",
+        "attr/observed"
+      ],
+      "name": "attr",
+      "label": "attr",
+      "description": "attr",
+      "context": "cortex/profile-attribute-facet"
+    },
+    {
+      "tags": [
+        "part/roof"
+      ],
+      "name": "part",
+      "label": "part",
+      "description": "part",
+      "context": "cortex/profile-attribute-facet"
+    },
+    {
+      "tags": [
+        "underwritting/investigation",
+        "underwritting/policy"
+      ],
+      "name": "underwritting",
+      "label": "underwritting",
+      "description": "underwritting",
+      "context": "cortex/profile-attribute-facet"
+    }
+  ]
+}

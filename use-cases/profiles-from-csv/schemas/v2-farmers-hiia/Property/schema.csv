@@ -1,0 +1,13 @@
+attributeKey,description,label,tag1,tag2,tag3,type,valueType,innerType1,innerType2,LinkToOtherProfiles
+policy.agents,What agents have every filed a policy for this property?,Policy Agents,underwritting/policy,attr/assigned,,assigned,list,,,YES
+policy.insured,What legal entities have ever insured this property?,Policy Insured,underwritting/policy,attr/declared,,declared,list,,,NO
+policy.investigators,What investigators have every examined this property?,Policy Investigators,underwritting/policy,attr/observed,,assigned,list,,,NO
+policy.cancelations,How many times has a policy been canceled on this property?,Policy Cancelations,underwritting/policy,attr/observed,,observed,number,,,NO
+policy.images,What are the unique images of this property accross policies it has been part of?,Policy Images,underwritting/policy,attr/observed,,observed,list,,,NO
+policy.discounts,What discounts have ever been associated with policies regarding this propery?,Policy Discounts,underwritting/policy,attr/declared,,declared,list,,,NO
+roof.images,What images have been submitted with regards to the property's roof?,Roof Images,part/roof,attr/declared,,declared,list,,,NO
+roof.hazardDetected,Has a hazard on the roof been detected?,Roof Hazard Detected,part/roof,attr/inferred,,inferred,boolean,,,NO
+roof.hazardType,What type of hazard has been detected on the roof?,Roof Hazard Type,part/roof,attr/inferred,,inferred,string,,,NO
+roof.hazardScore,How significant are the roof's hazard(s)?,Roof Hazard Score,part/roof,attr/inferred,,inferred,weight,,,NO
+investigation.discrepencies,How many times have investigators found descrepencies with regards to this property's policies?,Investigation Discrepencies,underwritting/investigation,attr/observed,,observed,number,,,NO
+investigation.agentFraudDetected,How many times have we detected agents engaging in fraudulent behavior with regards to this property?,Fraud Detected,underwritting/investigation,attr/observed,,observed,number,,,NO

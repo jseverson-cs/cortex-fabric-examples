@@ -39,9 +39,12 @@ from_csv_profiles_to_json_profiles: event_deps
 		| jq -c 'include "cortex-schema-helpers"; .[] | cast_record_values_to_json ' \
 		> ${EVENTS_DIR}/samples.json
 	cat ${EVENTS_DIR}/samples.json \
-		| cortex graph publish --dry-run --auto --transform transformer.js \
-		| jq -c 'select(.event != "$$set" and .event != "profileId" and .event != "schemaId")' \
-  	> ${EVENTS_DIR}/samples.ndjson
+                | jq -c -f 'samples-from-excel-structure.jq' \
+        > ${EVENTS_DIR}/samples.ndjson
+	# cat ${EVENTS_DIR}/samples.json \
+	# 	| cortex graph publish --dry-run --auto --transform transformer.js \
+	# 	| jq -c 'select(.event != "$$set" and .event != "profileId" and .event != "schemaId")' \
+  	# > ${EVENTS_DIR}/samples.ndjson
 
 upload_schemas: from_csv_schema_to_json_schema
 	cortex profiles save-schema ${SCHEMA_DIR}/schema.json

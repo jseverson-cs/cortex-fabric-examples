@@ -1,0 +1,408 @@
+{
+  "profileId": "sample-property",
+  "profiles": [
+    {
+      "profileId": "sample-property",
+      "environmentName": "cortex/default",
+      "createdAt": "2020-04-29T12:05:21.512Z",
+      "updatedAt": "2020-04-29T12:27:41.808Z",
+      "version": 1588163261758,
+      "context": "cortex/profile",
+      "profileSchema": "farmers-hiia/Property:6",
+      "attributes": [
+        {
+          "attributeKey": "policy.agents",
+          "profileType": "fi/Property",
+          "id": "72109f3a-e34b-43b9-838b-15e22c5251ea",
+          "profileId": "sample-property",
+          "attributeValue": null,
+          "createdAt": "2020-04-29T12:05:21.512Z",
+          "seq": 1588161921468,
+          "appliesOn": "2020-04-29T12:05:21.468Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "policy.insured",
+          "profileType": "fi/Property",
+          "id": "aaabbd69-5f4d-466c-8567-c2e78cd897e7",
+          "profileId": "sample-property",
+          "attributeValue": null,
+          "createdAt": "2020-04-29T12:05:22.593Z",
+          "seq": 1588161922546,
+          "appliesOn": "2020-04-29T12:05:22.547Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "policy.investigators",
+          "profileType": "farmers-hiia/Property",
+          "id": "ea1d2640-250d-4f04-95c9-6dd0a6213bac",
+          "profileId": "sample-property",
+          "attributeValue": {
+            "context": "cortex/attribute-value-list",
+            "version": "0.0.1",
+            "value": [
+              {
+                "value": "Detective Bob",
+                "context": "cortex/attribute-value-string",
+                "version": "0.0.1"
+              }
+            ]
+          },
+          "createdAt": "2020-04-29T12:27:41.363Z",
+          "seq": 1588163261312,
+          "appliesOn": "2020-04-29T12:27:41.312Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "roof.hazardType",
+          "profileType": "fi/Property",
+          "id": "792270a6-64a8-416d-943e-eeaa03e59f42",
+          "profileId": "sample-property",
+          "attributeValue": null,
+          "createdAt": "2020-04-29T12:05:22.916Z",
+          "seq": 1588161922873,
+          "appliesOn": "2020-04-29T12:05:22.873Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "policy.discounts",
+          "profileType": "fi/Property",
+          "id": "081e6dc2-a33d-4ede-95ea-d5aa1faf67be",
+          "profileId": "sample-property",
+          "attributeValue": null,
+          "createdAt": "2020-04-29T12:05:22.776Z",
+          "seq": 1588161922731,
+          "appliesOn": "2020-04-29T12:05:22.731Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "investigation.agentFraudDetected",
+          "profileType": "farmers-hiia/Property",
+          "id": "e5815c10-8d5f-43f4-892c-fc3403138bef",
+          "profileId": "sample-property",
+          "attributeValue": {
+            "value": 0,
+            "context": "cortex/attribute-value-number",
+            "version": "0.0.1",
+            "unitId": null,
+            "unitContext": null,
+            "unitTitle": null,
+            "unitIsPrefix": null
+          },
+          "createdAt": "2020-04-29T12:27:41.808Z",
+          "seq": 1588163261758,
+          "appliesOn": "2020-04-29T12:27:41.758Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "roof.images",
+          "profileType": "farmers-hiia/Property",
+          "id": "d51e75f6-9de7-4eec-bd1f-cdcbdc0586a0",
+          "profileId": "sample-property",
+          "attributeValue": {
+            "context": "cortex/attribute-value-list",
+            "version": "0.0.1",
+            "value": [
+              {
+                "value": "https://www.google.com/search?q=roof+image",
+                "context": "cortex/attribute-value-string",
+                "version": "0.0.1"
+              }
+            ]
+          },
+          "createdAt": "2020-04-29T12:27:41.551Z",
+          "seq": 1588163261501,
+          "appliesOn": "2020-04-29T12:27:41.502Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "policy.discounts",
+          "profileType": "farmers-hiia/Property",
+          "id": "90b4fa5f-72f7-4c06-93cd-7ef2c28f0b82",
+          "profileId": "sample-property",
+          "attributeValue": {
+            "context": "cortex/attribute-value-list",
+            "version": "0.0.1",
+            "value": [
+              {
+                "value": "ENGINEER",
+                "context": "cortex/attribute-value-string",
+                "version": "0.0.1"
+              },
+              {
+                "value": "MULTI_PLAN",
+                "context": "cortex/attribute-value-string",
+                "version": "0.0.1"
+              }
+            ]
+          },
+          "createdAt": "2020-04-29T12:27:41.500Z",
+          "seq": 1588163261457,
+          "appliesOn": "2020-04-29T12:27:41.457Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "roof.hazardDetected",
+          "profileType": "farmers-hiia/Property",
+          "id": "e0a5c042-0408-4134-8eb9-d274278a47af",
+          "profileId": "sample-property",
+          "attributeValue": {
+            "value": true,
+            "context": "cortex/attribute-value-boolean",
+            "weight": 0.75,
+            "version": "0.0.1"
+          },
+          "createdAt": "2020-04-29T12:27:41.605Z",
+          "seq": 1588163261549,
+          "appliesOn": "2020-04-29T12:27:41.549Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "policy.cancelations",
+          "profileType": "farmers-hiia/Property",
+          "id": "0a81b037-9547-4fdc-9750-c47cb7c3bb57",
+          "profileId": "sample-property",
+          "attributeValue": {
+            "value": 0,
+            "context": "cortex/attribute-value-number",
+            "version": "0.0.1",
+            "unitId": null,
+            "unitContext": null,
+            "unitTitle": null,
+            "unitIsPrefix": null
+          },
+          "createdAt": "2020-04-29T12:27:41.412Z",
+          "seq": 1588163261364,
+          "appliesOn": "2020-04-29T12:27:41.364Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "policy.cancelations",
+          "profileType": "fi/Property",
+          "id": "8323887c-28e0-4dd1-a864-f20bf272af2b",
+          "profileId": "sample-property",
+          "attributeValue": null,
+          "createdAt": "2020-04-29T12:05:22.684Z",
+          "seq": 1588161922641,
+          "appliesOn": "2020-04-29T12:05:22.641Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "policy.images",
+          "profileType": "farmers-hiia/Property",
+          "id": "0f4a484a-52e3-43d5-92e8-2518bce2c544",
+          "profileId": "sample-property",
+          "attributeValue": {
+            "context": "cortex/attribute-value-list",
+            "version": "0.0.1",
+            "value": [
+              {
+                "value": "https://www.google.com/search?q=roof+image",
+                "context": "cortex/attribute-value-string",
+                "version": "0.0.1"
+              }
+            ]
+          },
+          "createdAt": "2020-04-29T12:27:41.456Z",
+          "seq": 1588163261413,
+          "appliesOn": "2020-04-29T12:27:41.413Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "investigation.discrepencies",
+          "profileType": "farmers-hiia/Property",
+          "id": "edebf564-5eab-4cca-a3e2-b9f1de28b9f9",
+          "profileId": "sample-property",
+          "attributeValue": {
+            "value": 12,
+            "context": "cortex/attribute-value-number",
+            "version": "0.0.1",
+            "unitId": null,
+            "unitContext": null,
+            "unitTitle": null,
+            "unitIsPrefix": null
+          },
+          "createdAt": "2020-04-29T12:27:41.756Z",
+          "seq": 1588163261713,
+          "appliesOn": "2020-04-29T12:27:41.713Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "policy.agents",
+          "profileType": "farmers-hiia/Property",
+          "id": "bd974410-56f6-4834-92a4-7529a1bd8e50",
+          "profileId": "sample-property",
+          "attributeValue": {
+            "context": "cortex/attribute-value-list",
+            "version": "0.0.1",
+            "value": [
+              {
+                "value": "Agent Jack",
+                "context": "cortex/attribute-value-string",
+                "version": "0.0.1"
+              }
+            ]
+          },
+          "createdAt": "2020-04-29T12:27:40.745Z",
+          "seq": 1588163260700,
+          "appliesOn": "2020-04-29T12:27:40.700Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "investigation.discrepencies",
+          "profileType": "fi/Property",
+          "id": "2c579fc8-1d2a-4109-8c60-608cb25b5aee",
+          "profileId": "sample-property",
+          "attributeValue": null,
+          "createdAt": "2020-04-29T12:05:22.963Z",
+          "seq": 1588161922960,
+          "appliesOn": "2020-04-29T12:05:22.960Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "roof.hazardScore",
+          "profileType": "fi/Property",
+          "id": "3c00d6ba-3620-465d-a8be-9158c3a8322d",
+          "profileId": "sample-property",
+          "attributeValue": null,
+          "createdAt": "2020-04-29T12:05:22.960Z",
+          "seq": 1588161922916,
+          "appliesOn": "2020-04-29T12:05:22.917Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "policy.insured",
+          "profileType": "farmers-hiia/Property",
+          "id": "8948cf96-d600-4815-93f7-4766a624bbbe",
+          "profileId": "sample-property",
+          "attributeValue": {
+            "context": "cortex/attribute-value-list",
+            "version": "0.0.1",
+            "value": [
+              {
+                "value": "Insured John",
+                "context": "cortex/attribute-value-string",
+                "version": "0.0.1"
+              }
+            ]
+          },
+          "createdAt": "2020-04-29T12:27:41.314Z",
+          "seq": 1588163261260,
+          "appliesOn": "2020-04-29T12:27:41.260Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "investigation.agentFraudDetected",
+          "profileType": "fi/Property",
+          "id": "c3a4a9b6-00d3-475d-bc9c-bf8dbbf0f896",
+          "profileId": "sample-property",
+          "attributeValue": null,
+          "createdAt": "2020-04-29T12:05:23.016Z",
+          "seq": 1588161922965,
+          "appliesOn": "2020-04-29T12:05:22.965Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "roof.hazardDetected",
+          "profileType": "fi/Property",
+          "id": "f72f9d16-99dc-461c-8f6d-ced0cfb9159e",
+          "profileId": "sample-property",
+          "attributeValue": null,
+          "createdAt": "2020-04-29T12:05:22.872Z",
+          "seq": 1588161922826,
+          "appliesOn": "2020-04-29T12:05:22.826Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "roof.hazardScore",
+          "profileType": "farmers-hiia/Property",
+          "id": "b132b662-737d-4ce9-a262-2b1ad2b5b4b6",
+          "profileId": "sample-property",
+          "attributeValue": {
+            "value": 0.6,
+            "context": "cortex/attribute-value-weight",
+            "version": "0.0.1",
+            "weight": 1
+          },
+          "createdAt": "2020-04-29T12:27:41.711Z",
+          "seq": 1588163261652,
+          "appliesOn": "2020-04-29T12:27:41.652Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "roof.hazardType",
+          "profileType": "farmers-hiia/Property",
+          "id": "4a654153-3b77-490c-88b9-7822615adad6",
+          "profileId": "sample-property",
+          "attributeValue": {
+            "value": "MISSING_SHINGLES",
+            "context": "cortex/attribute-value-string",
+            "weight": 0.75,
+            "version": "0.0.1"
+          },
+          "createdAt": "2020-04-29T12:27:41.653Z",
+          "seq": 1588163261600,
+          "appliesOn": "2020-04-29T12:27:41.600Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "roof.images",
+          "profileType": "fi/Property",
+          "id": "7ce36b8c-a220-44e5-bba0-c1d06e6199f9",
+          "profileId": "sample-property",
+          "attributeValue": null,
+          "createdAt": "2020-04-29T12:05:22.824Z",
+          "seq": 1588161922777,
+          "appliesOn": "2020-04-29T12:05:22.778Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "policy.images",
+          "profileType": "fi/Property",
+          "id": "a4225b7a-fd8a-48b9-9435-ae72f3e4c849",
+          "profileId": "sample-property",
+          "attributeValue": null,
+          "createdAt": "2020-04-29T12:05:22.688Z",
+          "seq": 1588161922684,
+          "appliesOn": "2020-04-29T12:05:22.684Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        },
+        {
+          "attributeKey": "policy.investigators",
+          "profileType": "fi/Property",
+          "id": "90b19fe2-ed74-4e91-a975-c6cc25e93f85",
+          "profileId": "sample-property",
+          "attributeValue": null,
+          "createdAt": "2020-04-29T12:05:22.640Z",
+          "seq": 1588161922595,
+          "appliesOn": "2020-04-29T12:05:22.595Z",
+          "context": "cortex/attributes-observed",
+          "version": "0.0.1"
+        }
+      ]
+    }
+  ]
+}

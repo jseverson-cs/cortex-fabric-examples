@@ -33,9 +33,12 @@ def simple_to_complex_value_type: (
         capture("^list.(?<first>([a-zA-Z-/]|[[]|[]])+).$") |
         {
           "outerType": "cortex/attribute-value-list",
-          "innerTypes": [
-            (.first | simple_to_complex_value_type)
-          ]
+          "innerTypes": (
+	    if ((.first|debug) == "null")
+	    then [] 
+	    else [ (.first | simple_to_complex_value_type) ]
+	    end
+	  )
         }
       )
       else
@@ -44,9 +47,12 @@ def simple_to_complex_value_type: (
           capture("^profile-link.(?<first>[a-zA-Z-/]+).$") |
           {
             "outerType": "cortex/profile-link",
-            "innerTypes": [
-              (.first | simple_to_complex_value_type)
-            ]
+            "innerTypes": (
+	      if ((.first|debug) == "null")
+              then []
+              else [ (.first | simple_to_complex_value_type) ]
+              end
+            )
           }
         )
         else

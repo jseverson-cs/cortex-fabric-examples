@@ -1,0 +1,8 @@
+name,label,parent,tag1
+roof,Roof,,part/roof
+policy,Policies,,underwritting/policy
+investigations,Investigations,,underwritting/investigation
+assigned,Assigned,,attr/assigned
+declared,Declared,,attr/declared
+observed,Observed,,attr/observed
+inferred,Inferred,,attr/inferred

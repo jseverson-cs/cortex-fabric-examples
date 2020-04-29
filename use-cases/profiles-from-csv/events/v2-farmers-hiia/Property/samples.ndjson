@@ -1,0 +1,12 @@
+{"event":"policy.agents","entityId":"sample-property","entityType":"farmers-hiia/Property","properties":{"value":[{"value":"Agent Jack","context":"cortex/attribute-value-string"}],"context":"cortex/attribute-value-list"}}
+{"event":"policy.insured","entityId":"sample-property","entityType":"farmers-hiia/Property","properties":{"value":[{"value":"Insured John","context":"cortex/attribute-value-string"}],"context":"cortex/attribute-value-list"}}
+{"event":"policy.investigators","entityId":"sample-property","entityType":"farmers-hiia/Property","properties":{"value":[{"value":"Detective Bob","context":"cortex/attribute-value-string"}],"context":"cortex/attribute-value-list"}}
+{"event":"policy.cancelations","entityId":"sample-property","entityType":"farmers-hiia/Property","properties":{"value":0,"context":"cortex/attribute-value-number"}}
+{"event":"policy.images","entityId":"sample-property","entityType":"farmers-hiia/Property","properties":{"value":[{"value":"https://www.google.com/search?q=roof+image","context":"cortex/attribute-value-string"}],"context":"cortex/attribute-value-list"}}
+{"event":"policy.discounts","entityId":"sample-property","entityType":"farmers-hiia/Property","properties":{"value":[{"value":"ENGINEER","context":"cortex/attribute-value-string"},{"value":"MULTI_PLAN","context":"cortex/attribute-value-string"}],"context":"cortex/attribute-value-list"}}
+{"event":"roof.images","entityId":"sample-property","entityType":"farmers-hiia/Property","properties":{"value":[{"value":"https://www.google.com/search?q=roof+image","context":"cortex/attribute-value-string"}],"context":"cortex/attribute-value-list"}}
+{"event":"roof.hazardDetected","entityId":"sample-property","entityType":"farmers-hiia/Property","properties":{"value":true,"context":"cortex/attribute-value-boolean","weight":0.75}}
+{"event":"roof.hazardType","entityId":"sample-property","entityType":"farmers-hiia/Property","properties":{"value":"MISSING_SHINGLES","context":"cortex/attribute-value-string","weight":0.75}}
+{"event":"roof.hazardScore","entityId":"sample-property","entityType":"farmers-hiia/Property","properties":{"value":0.6,"context":"cortex/attribute-value-weight"}}
+{"event":"investigation.discrepencies","entityId":"sample-property","entityType":"farmers-hiia/Property","properties":{"value":12,"context":"cortex/attribute-value-number"}}
+{"event":"investigation.agentFraudDetected","entityId":"sample-property","entityType":"farmers-hiia/Property","properties":{"value":0,"context":"cortex/attribute-value-number"}}
