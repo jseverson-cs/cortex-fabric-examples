@@ -22,7 +22,7 @@
       "label": "Age",
       "type": "cortex/attributes-declared",
       "valueType": {
-        "outerType": "cortex/attribute-value-total",
+        "outerType": "cortex/attribute-value-number",
         "innerTypes": []
       },
       "tags": [
@@ -321,7 +321,7 @@
         "outerType": "cortex/attribute-value-dimensional",
         "innerTypes": [
           {
-            "outerType": "cortex/attribute-value-datetime",
+            "outerType": "cice/Flavor",
             "innerTypes": []
           }
         ]
@@ -373,7 +373,7 @@
       "label": "Calorie Range",
       "type": "cortex/attributes-observed",
       "valueType": {
-        "outerType": "cortex/attribute-value-total",
+        "outerType": "cortex/attribute-value-string",
         "innerTypes": []
       },
       "tags": [
@@ -387,7 +387,7 @@
       "label": "Positive Reviews",
       "type": "cortex/attributes-observed",
       "valueType": {
-        "outerType": "cortex/attribute-value-total",
+        "outerType": "cortex/attribute-value-number",
         "innerTypes": []
       },
       "tags": [
@@ -400,7 +400,7 @@
       "label": "Negative Reviews",
       "type": "cortex/attributes-observed",
       "valueType": {
-        "outerType": "cortex/attribute-value-total",
+        "outerType": "cortex/attribute-value-number",
         "innerTypes": []
       },
       "tags": [
@@ -413,7 +413,7 @@
       "label": "Total Visits",
       "type": "cortex/attributes-observed",
       "valueType": {
-        "outerType": "cortex/attribute-value-total",
+        "outerType": "cortex/attribute-value-number",
         "innerTypes": []
       },
       "tags": [

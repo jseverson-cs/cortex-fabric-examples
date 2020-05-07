@@ -5,6 +5,8 @@ SCHEMA_DIR := ${MAKEFILE_DIR}/schemas/${SCHEMA}
 EVENTS_DIR := ${MAKEFILE_DIR}/events/${SCHEMA}
 PROFILE_TYPE := ${SCHEMA}
 
+GOOGLE_AUTH_SECRET := /Users/oeid/Downloads/project-id-0905112707509830376-028dc8bad02b.json
+
 activate:
 	@echo "conda activate --stack ${CONDA_ENV}"
 
@@ -40,7 +42,8 @@ from_csv_profiles_to_json_profiles: event_deps
 		> ${EVENTS_DIR}/samples.json
 	cat ${EVENTS_DIR}/samples.json \
                 | jq -c -f 'samples-from-excel-structure.jq' \
-        > ${EVENTS_DIR}/samples.ndjson
+		| jq -c 'select(((.properties|length) > 0))' \
+		> ${EVENTS_DIR}/samples.ndjson
 	# cat ${EVENTS_DIR}/samples.json \
 	# 	| cortex graph publish --dry-run --auto --transform transformer.js \
 	# 	| jq -c 'select(.event != "$$set" and .event != "profileId" and .event != "schemaId")' \

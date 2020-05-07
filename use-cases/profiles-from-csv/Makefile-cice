@@ -7,9 +7,18 @@ IMPORT_FILES=import_files
 
 include Makefile
 
+# https://docs.google.com/spreadsheets/d/1Go78fdkdRuJw2Mq8LHp0nVaCGvpEHoAnF4BRY5AFIkc/edit#gid=1187872843
+GOOGLE_SHEET_ID := 1Go78fdkdRuJw2Mq8LHp0nVaCGvpEHoAnF4BRY5AFIkc
+
 import_files:
-	cp ${HOME}/Downloads/'CICE Profile Attributes - CustomerSchema.csv' ${SCHEMA_DIR}/schema.csv || true
-	cp ${HOME}/Downloads/'CICE Profile Attributes - Taxonomy.csv' ${SCHEMA_DIR}/taxonomy.csv || true
-	cp ${HOME}/Downloads/'CICE Profile Attributes - CustomerSamples.csv' ${EVENTS_DIR}/samples.csv || true
+	python download-csv-from-google-sheets.py '${GOOGLE_AUTH_SECRET}' \
+          '${GOOGLE_SHEET_ID}' \
+          'CustomerSchema!A1:L' > ${SCHEMA_DIR}/schema.csv
+	python download-csv-from-google-sheets.py '${GOOGLE_AUTH_SECRET}' \
+          '${GOOGLE_SHEET_ID}' \
+          'Taxonomy!A1:H' > ${SCHEMA_DIR}/taxonomy.csv
+	python download-csv-from-google-sheets.py '${GOOGLE_AUTH_SECRET}' \
+          '${GOOGLE_SHEET_ID}' \
+          'CustomerSamples!A1:AJ' > ${EVENTS_DIR}/samples.csv
 
 cice: upload
