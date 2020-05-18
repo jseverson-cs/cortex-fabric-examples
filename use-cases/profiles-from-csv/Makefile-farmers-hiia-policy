@@ -1,0 +1,25 @@
+CONDA_ENV := farmers-hiia
+IMPORT_FILES=import_files
+SCHEMA := farmers-hiia/Policy
+PROFILE_TYPE := fi/Policy
+include Makefile
+SCHEMA_DIR := ${MAKEFILE_DIR}/schemas/${SCHEMA}
+EVENTS_DIR := ${MAKEFILE_DIR}/events/${SCHEMA}
+DRIVE_ID := 1SIT5M22iHfbWwnDE_22HmapL0aivrcLRlH7dbzH-7XQ
+
+# Google Drive ID: 1SIT5M22iHfbWwnDE_22HmapL0aivrcLRlH7dbzH-7XQ
+# https://docs.google.com/spreadsheets/d/1SIT5M22iHfbWwnDE_22HmapL0aivrcLRlH7dbzH-7XQ/edit#gid=765481763
+import_files:
+	python download-csv-from-google-sheets.py \
+	  '/Users/oeid/Downloads/project-id-0905112707509830376-028dc8bad02b.json' \
+	  '${DRIVE_ID}' \
+	  'policy-schema!A1:L' > ${SCHEMA_DIR}/schema.csv
+	python download-csv-from-google-sheets.py \
+	  '/Users/oeid/Downloads/project-id-0905112707509830376-028dc8bad02b.json' \
+	  '${DRIVE_ID}' \
+	  'taxonomy!A1:G' > ${SCHEMA_DIR}/taxonomy.csv
+	python download-csv-from-google-sheets.py \
+          '/Users/oeid/Downloads/project-id-0905112707509830376-028dc8bad02b.json' \
+          '${DRIVE_ID}' \
+          'policy-samples!A1:H' > ${EVENTS_DIR}/samples.csv
+

@@ -1,0 +1,154 @@
+{
+  "name": "farmers-hiia/Policy",
+  "title": "farmers-hiia/Policy",
+  "profileType": "farmers-hiia/Policy",
+  "description": "farmers-hiia/Policy",
+  "attributes": [
+    {
+      "description": "What images related to the policy are likely of roofs?",
+      "label": "Roofs in Policy",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "property/roof",
+        "attr/inferred"
+      ],
+      "name": "inferrence.roofImages"
+    },
+    {
+      "description": "What images related to the policy are likely not roofs?",
+      "label": "Non Roofs in Policy",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "property/roof",
+        "attr/inferred"
+      ],
+      "name": "inferrence.nonRoofImages"
+    },
+    {
+      "description": "What images related to the policy are likely of roofs with hazards present on the roof?",
+      "label": "Roofs with Hazards",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "property/roof",
+        "attr/inferred"
+      ],
+      "name": "inferrence.roofImages.withHazards"
+    },
+    {
+      "description": "What images related to the policy are likely of roofs without hazards present on the roof?",
+      "label": "Roofs without Hazards",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "property/roof",
+        "attr/inferred"
+      ],
+      "name": "inferrence.roofImages.withoutHazards"
+    },
+    {
+      "description": "What roof hazards have been detected across all of the policy's roof images?",
+      "label": "Detected Roof Hazards",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "property/roof",
+        "attr/inferred"
+      ],
+      "name": "inference.roofHazards"
+    },
+    {
+      "description": "What materials have been detected across all of the policy's roof images?",
+      "label": "Detected Roof Materials",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "property/roof",
+        "attr/inferred"
+      ],
+      "name": "inference.roofMaterials"
+    },
+    {
+      "description": "What images are related to this policy?",
+      "label": "Images",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "property/info",
+        "attr/declared"
+      ],
+      "name": "images"
+    }
+  ],
+  "attributeTags": [
+    {
+      "name": "attr/declared",
+      "label": "declared",
+      "description": "attr/declared",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "attr/inferred",
+      "label": "inferred",
+      "description": "attr/inferred",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "property/info",
+      "label": "info",
+      "description": "property/info",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "property/roof",
+      "label": "roof",
+      "description": "property/roof",
+      "context": "cortex/profile-attribute-tag"
+    }
+  ],
+  "facets": [
+    {
+      "tags": [
+        "attr/declared",
+        "attr/inferred"
+      ],
+      "name": "attr",
+      "label": "attr",
+      "description": "attr",
+      "context": "cortex/profile-attribute-facet"
+    },
+    {
+      "tags": [
+        "property/info",
+        "property/roof"
+      ],
+      "name": "property",
+      "label": "property",
+      "description": "property",
+      "context": "cortex/profile-attribute-facet"
+    }
+  ]
+}

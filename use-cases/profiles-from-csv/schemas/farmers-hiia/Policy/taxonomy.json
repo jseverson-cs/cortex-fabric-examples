@@ -1,0 +1,68 @@
+{
+  "taxonomy": [
+    {
+      "name": "info",
+      "label": "Property Info",
+      "tags": [
+        "property/info"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "roof",
+      "label": "Roof",
+      "tags": [
+        "property/roof"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "policy",
+      "label": "Policies",
+      "tags": [
+        "underwritting/policy"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "investigations",
+      "label": "Investigations",
+      "tags": [
+        "underwritting/investigation"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "assigned",
+      "label": "Assigned",
+      "tags": [
+        "attr/assigned"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "declared",
+      "label": "Declared",
+      "tags": [
+        "attr/declared"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "observed",
+      "label": "Observed",
+      "tags": [
+        "attr/observed"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "inferred",
+      "label": "Inferred",
+      "tags": [
+        "attr/inferred"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    }
+  ]
+}

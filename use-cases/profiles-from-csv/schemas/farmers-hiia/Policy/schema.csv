@@ -1,0 +1,8 @@
+attributeKey,description,label,tag1,tag2,tag3,type,valueType,innerType1,innerType2,LinkToOtherProfiles
+inferrence.roofImages,What images related to the policy are likely of roofs?,Roofs in Policy,property/roof,attr/inferred,,inferred,list,,,NO
+inferrence.nonRoofImages,What images related to the policy are likely not roofs?,Non Roofs in Policy,property/roof,attr/inferred,,inferred,list,,,NO
+inferrence.roofImages.withHazards,What images related to the policy are likely of roofs with hazards present on the roof?,Roofs with Hazards,property/roof,attr/inferred,,inferred,list,,,NO
+inferrence.roofImages.withoutHazards,What images related to the policy are likely of roofs without hazards present on the roof?,Roofs without Hazards,property/roof,attr/inferred,,inferred,list,,,NO
+inference.roofHazards,What roof hazards have been detected across all of the policy's roof images?,Detected Roof Hazards,property/roof,attr/inferred,,inferred,list,,,NO
+inference.roofMaterials,What materials have been detected across all of the policy's roof images?,Detected Roof Materials,property/roof,attr/inferred,,inferred,list,,,NO
+images,What images are related to this policy?,Images,property/info,attr/declared,,declared,list,,,NO
