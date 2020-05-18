@@ -5,105 +5,415 @@
   "description": "farmers-hiia/Policy",
   "attributes": [
     {
-      "description": "What images related to the policy are likely of roofs?",
-      "label": "Roofs in Policy",
-      "type": "cortex/attributes-inferred",
+      "description": "Agent Id, unique for each agent of Farmers",
+      "label": "Agent ID",
+      "type": "cortex/attributes-assigned",
       "valueType": {
-        "outerType": "cortex/attribute-value-list",
+        "outerType": "cortex/attribute-value-string",
         "innerTypes": []
       },
       "tags": [
-        "property/roof",
-        "attr/inferred"
+        "sources/agentdemographic",
+        "attr/assigned"
       ],
-      "name": "inferrence.roofImages"
+      "name": "agentId"
     },
     {
-      "description": "What images related to the policy are likely not roofs?",
-      "label": "Non Roofs in Policy",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-list",
-        "innerTypes": []
-      },
-      "tags": [
-        "property/roof",
-        "attr/inferred"
-      ],
-      "name": "inferrence.nonRoofImages"
-    },
-    {
-      "description": "What images related to the policy are likely of roofs with hazards present on the roof?",
-      "label": "Roofs with Hazards",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-list",
-        "innerTypes": []
-      },
-      "tags": [
-        "property/roof",
-        "attr/inferred"
-      ],
-      "name": "inferrence.roofImages.withHazards"
-    },
-    {
-      "description": "What images related to the policy are likely of roofs without hazards present on the roof?",
-      "label": "Roofs without Hazards",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-list",
-        "innerTypes": []
-      },
-      "tags": [
-        "property/roof",
-        "attr/inferred"
-      ],
-      "name": "inferrence.roofImages.withoutHazards"
-    },
-    {
-      "description": "What roof hazards have been detected across all of the policy's roof images?",
-      "label": "Detected Roof Hazards",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-list",
-        "innerTypes": []
-      },
-      "tags": [
-        "property/roof",
-        "attr/inferred"
-      ],
-      "name": "inference.roofHazards"
-    },
-    {
-      "description": "What materials have been detected across all of the policy's roof images?",
-      "label": "Detected Roof Materials",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-list",
-        "innerTypes": []
-      },
-      "tags": [
-        "property/roof",
-        "attr/inferred"
-      ],
-      "name": "inference.roofMaterials"
-    },
-    {
-      "description": "What images are related to this policy?",
-      "label": "Images",
+      "description": "Primariy Agent which each agent works for. This will be same as AgentId for solo agents",
+      "label": "Agency Agent Number",
       "type": "cortex/attributes-declared",
       "valueType": {
-        "outerType": "cortex/attribute-value-list",
+        "outerType": "cortex/attribute-value-string",
         "innerTypes": []
       },
       "tags": [
-        "property/info",
+        "sources/agentdemographic",
         "attr/declared"
       ],
-      "name": "images"
+      "name": "agencyAgentNumber"
+    },
+    {
+      "description": "Primary Agent name",
+      "label": "Agency Agent Name",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "sources/agentdemographic",
+        "attr/declared"
+      ],
+      "name": "agencyAgentName"
+    },
+    {
+      "description": "Agent's age",
+      "label": "Agent's age",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "sources/agentdemographic",
+        "attr/declared"
+      ],
+      "name": "agentAge"
+    },
+    {
+      "description": "Agent's active status with Farmers",
+      "label": "Agent's active status with Farmers",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-boolean",
+        "innerTypes": []
+      },
+      "tags": [
+        "sources/agentdemographic",
+        "attr/declared"
+      ],
+      "name": "isAnActiveAgent"
+    },
+    {
+      "description": "Agent's city of operation",
+      "label": "Agent's city of operation",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "sources/agentdemographic",
+        "attr/declared"
+      ],
+      "name": "agentWorkCity"
+    },
+    {
+      "description": "Agent's state of operation",
+      "label": "Agent's state of operation",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "sources/agentdemographic",
+        "attr/declared"
+      ],
+      "name": "agentWorkState"
+    },
+    {
+      "description": "Number of documents submitted",
+      "label": "# documents submitted by an agent",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/agentactivity",
+        "attr/observed"
+      ],
+      "name": "numberOfDocumentsSubmitted"
+    },
+    {
+      "description": "Number of documents approved from all submissions",
+      "label": "# documents approved for an agent",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/agentactivity",
+        "attr/observed"
+      ],
+      "name": "numberOfDocumentsSubmitted.approved.count"
+    },
+    {
+      "description": "Number of documents rejected from all submissions",
+      "label": "# documents rejected for an agent",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/agentactivity",
+        "attr/observed"
+      ],
+      "name": "numberOfDocumentsSubmitted.rejected.count"
+    },
+    {
+      "description": "Number of Affinity type documents submitted",
+      "label": "# Affinity type documents submitted by an agent",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/agentactivity",
+        "attr/observed"
+      ],
+      "name": "numberOfDocumentsSubmitted.affinity.count"
+    },
+    {
+      "description": "Number of Good Student type documents submitted",
+      "label": "# Good Student type documents submitted by an agent",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/agentactivity",
+        "attr/observed"
+      ],
+      "name": "numberOfDocumentsSubmitted.goodStudent.count"
+    },
+    {
+      "description": "Number of Prior Insurance type documents submitted",
+      "label": "# Prior Insurance type documents submitted by an agent",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/agentactivity",
+        "attr/observed"
+      ],
+      "name": "numberOfDocumentsSubmitted.priorInsurance.count"
+    },
+    {
+      "description": "When was the last time an agent submitted a document?",
+      "label": "When was the last time an agent submitted a document?",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-datetime",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/agentactivity",
+        "attr/observed"
+      ],
+      "name": "latestDocumentSubmissionDate"
+    },
+    {
+      "description": "When was the last time an agent modified a document?",
+      "label": "When was the last time an agent modified a document?",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-datetime",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/agentactivity",
+        "attr/observed"
+      ],
+      "name": "latestDocumentModifiedDate"
+    },
+    {
+      "description": "Number of Image type documents submitted by an agent",
+      "label": "# Image type documents submitted by an agent",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/agentactivity",
+        "attr/observed"
+      ],
+      "name": "numberOfDocumentsSubmitted.image.count"
+    },
+    {
+      "description": "Number of Text type documents submitted by an agent",
+      "label": "# Text type documents submitted by an agent",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/agentactivity",
+        "attr/observed"
+      ],
+      "name": "numberOfDocumentsSubmitted.text.count"
+    },
+    {
+      "description": "Number of blank images submitted by an agent",
+      "label": "# blank images submitted by an agent",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/agentactivity",
+        "attr/inferred"
+      ],
+      "name": "numberOfDocumentsSubmitted.blank.count"
+    },
+    {
+      "description": "Number of similar document pairs submitted by an agent",
+      "label": "# similar document pairs submitted by an agent",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/documentsimilarity",
+        "attr/inferred"
+      ],
+      "name": "numberOfSimilarDocumentPairsSubmitted"
+    },
+    {
+      "description": "List of Home Insurance policies submitted",
+      "label": "list of home insurance policies submitted by an agent",
+      "type": "cortex/attributes-assigned",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/profile-link",
+            "innerTypes": [
+              {
+                "outerType": "fi/policy",
+                "innerTypes": []
+              }
+            ]
+          }
+        ]
+      },
+      "tags": [
+        "groups/policies",
+        "attr/assigned"
+      ],
+      "name": "listOfHomeInsurancePoliciesSubmitted"
+    },
+    {
+      "description": "Number of Home Insurance policies submitted",
+      "label": "# home insurance policies submitted by an agent",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/hiia",
+        "attr/observed"
+      ],
+      "name": "numberOfHomeInsurancePoliciesSubmitted.count"
+    },
+    {
+      "description": "Number of Home Insurance images submitted",
+      "label": "# home insurance images submitted by an agent",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/hiia",
+        "attr/observed"
+      ],
+      "name": "numberOfHomeInsuranceImagesSubmitted.count"
+    },
+    {
+      "description": "Number of Home Insurance images identified",
+      "label": "# home insurance images identified for an agent",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/hiia",
+        "attr/inferred"
+      ],
+      "name": "numberOfHomeInsuranceImagesIdentified.count"
+    },
+    {
+      "description": "Number of Home Insurance hazards identified",
+      "label": "# home insurance hazards identified for an agent",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/hiia",
+        "attr/inferred"
+      ],
+      "name": "numberOfHomeInsuranceHazardsIdentified.count"
+    },
+    {
+      "description": "Number of Home Insurance high valued hazards identified",
+      "label": "# home insurance high valued hazards identified for an agent",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/hiia",
+        "attr/inferred"
+      ],
+      "name": "numberOfHomeInsuranceHighvaluedHazardsIdentified.count"
+    },
+    {
+      "description": "Total premium of the Home Insurance Policies with at least one hazard submitted",
+      "label": "$ premium of the home insurance policies with at least one hazard submitted for an agent",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/hiia",
+        "attr/observed"
+      ],
+      "name": "totalHomeInsurancePremiumOnPoliciesWithatleastOneHazardSubmitted.value"
+    },
+    {
+      "description": "Total premium of the Home Insurance Policies with at least one hazard identified",
+      "label": "$ premium of the home insurance policies with at least one hazard identified for an agent",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/hiia",
+        "attr/inferred"
+      ],
+      "name": "totalHomeInsurancePremiumOnPoliciesWithatleastOneHazardIdentified.value"
+    },
+    {
+      "description": "Total premium of the Home Insurance Policies with at least one high valued hazard identified",
+      "label": "$ premium of the home insurance policies with at least one high valued hazard identified for an agent",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "groups/hiia",
+        "attr/inferred"
+      ],
+      "name": "totalHomeInsurancePremiumOnPoliciesWithatleastOneHighvaluedHazardIdentified.value"
     }
   ],
   "attributeTags": [
+    {
+      "name": "attr/assigned",
+      "label": "assigned",
+      "description": "attr/assigned",
+      "context": "cortex/profile-attribute-tag"
+    },
     {
       "name": "attr/declared",
       "label": "declared",
@@ -117,23 +427,49 @@
       "context": "cortex/profile-attribute-tag"
     },
     {
-      "name": "property/info",
-      "label": "info",
-      "description": "property/info",
+      "name": "attr/observed",
+      "label": "observed",
+      "description": "attr/observed",
       "context": "cortex/profile-attribute-tag"
     },
     {
-      "name": "property/roof",
-      "label": "roof",
-      "description": "property/roof",
+      "name": "groups/agentactivity",
+      "label": "agentactivity",
+      "description": "groups/agentactivity",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "groups/documentsimilarity",
+      "label": "documentsimilarity",
+      "description": "groups/documentsimilarity",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "groups/hiia",
+      "label": "hiia",
+      "description": "groups/hiia",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "groups/policies",
+      "label": "policies",
+      "description": "groups/policies",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "sources/agentdemographic",
+      "label": "agentdemographic",
+      "description": "sources/agentdemographic",
       "context": "cortex/profile-attribute-tag"
     }
   ],
   "facets": [
     {
       "tags": [
+        "attr/assigned",
         "attr/declared",
-        "attr/inferred"
+        "attr/inferred",
+        "attr/observed"
       ],
       "name": "attr",
       "label": "attr",
@@ -142,77 +478,152 @@
     },
     {
       "tags": [
-        "property/info",
-        "property/roof"
+        "groups/agentactivity",
+        "groups/documentsimilarity",
+        "groups/hiia",
+        "groups/policies"
       ],
-      "name": "property",
-      "label": "property",
-      "description": "property",
+      "name": "groups",
+      "label": "groups",
+      "description": "groups",
+      "context": "cortex/profile-attribute-facet"
+    },
+    {
+      "tags": [
+        "sources/agentdemographic"
+      ],
+      "name": "sources",
+      "label": "sources",
+      "description": "sources",
       "context": "cortex/profile-attribute-facet"
     }
   ],
   "taxonomy": [
     {
-      "name": "info",
-      "label": "Property Info",
+      "name": "agentdemographic",
+      "label": "Agent Demographic",
       "tags": [
-        "property/info"
+        "sources/agentdemographic",
+        "attr/assigned",
+        "assigned"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "roof",
-      "label": "Roof",
+      "name": "other",
+      "label": "Other",
       "tags": [
-        "property/roof"
+        "groups/other",
+        "attr/declared",
+        "declared"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "policy",
-      "label": "Policies",
+      "name": "underwriting",
+      "label": "Underwriting",
       "tags": [
-        "underwritting/policy"
+        "groups/underwriting",
+        "attr/observed",
+        "observed"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "investigations",
-      "label": "Investigations",
+      "name": "salesmarketing",
+      "label": "Sales & Marketing",
       "tags": [
-        "underwritting/investigation"
+        "groups/salesmarketing",
+        "attr/inferred",
+        "inferred"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "assigned",
-      "label": "Assigned",
+      "name": "docsimilarity",
+      "label": "Document Similarity",
+      "parent": "underwriting",
       "tags": [
-        "attr/assigned"
+        "groups/documentsimilarity"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "declared",
-      "label": "Declared",
+      "name": "rateevasion",
+      "label": "Rate Evasion",
+      "parent": "underwriting",
       "tags": [
-        "attr/declared"
+        "groups/rateevasion"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "observed",
-      "label": "Observed",
+      "name": "leadagentmatching",
+      "label": "Lead Agent Matching",
+      "parent": "salesmarketing",
       "tags": [
-        "attr/observed"
+        "groups/leadagentmatching"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "inferred",
-      "label": "Inferred",
+      "name": "agentactivity",
+      "label": "Agent Activity",
       "tags": [
-        "attr/inferred"
+        "groups/agentactivity"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "hiia",
+      "label": "Home Insurance Image Analysis",
+      "parent": "rateevasion",
+      "tags": [
+        "groups/hiia"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "policies",
+      "label": "Policies submitted by agent",
+      "parent": "agentactivity",
+      "tags": [
+        "groups/policies"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "documents",
+      "label": "Documents submitted by agent",
+      "parent": "policies",
+      "tags": [
+        "groups/documents"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "policyinfo",
+      "label": "Policy information",
+      "tags": [
+        "sources/policyinfo"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "policytype",
+      "label": "Policy Types",
+      "parent": "policies",
+      "tags": [
+        "groups/policytype"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "imagetype",
+      "label": "Type of images",
+      "parent": "policytype",
+      "tags": [
+        "groups/imagetype"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     }

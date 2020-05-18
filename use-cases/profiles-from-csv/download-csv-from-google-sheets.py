@@ -17,8 +17,7 @@ SPREADSHEET_ID= sys.argv[2]
 RANGE = sys.argv[3]
 
 
-credentials = service_account.Credentials.from_service_account_file(
-    '/Users/oeid/Downloads/project-id-0905112707509830376-028dc8bad02b.json')
+credentials = service_account.Credentials.from_service_account_file(CRED_FILE)
 
 scoped_credentials = credentials.with_scopes([
     'https://www.googleapis.com/auth/spreadsheets.readonly'
@@ -40,4 +39,3 @@ df = pd.DataFrame([v for v in values if v])
 if columns:
     df.columns = columns[:len(df.columns)]
 print(df.to_csv(index=False), end="")
-

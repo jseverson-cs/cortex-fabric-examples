@@ -1,11 +1,11 @@
 CONDA_ENV := farmers-hiia
 IMPORT_FILES=import_files
-SCHEMA := farmers-hiia/Policy
-PROFILE_TYPE := fi/Policy
+SCHEMA := farmers-hiia/Agent
+PROFILE_TYPE := fi/Agent
 include Makefile
 SCHEMA_DIR := ${MAKEFILE_DIR}/schemas/${SCHEMA}
 EVENTS_DIR := ${MAKEFILE_DIR}/events/${SCHEMA}
-DRIVE_ID := 1SIT5M22iHfbWwnDE_22HmapL0aivrcLRlH7dbzH-7XQ
+DRIVE_ID := 1YNl_JzUINwJSQqJP8zVL4gCj9M5MrtXiQQzc7eo4AZU
 
 # Google Drive ID: 1SIT5M22iHfbWwnDE_22HmapL0aivrcLRlH7dbzH-7XQ
 # https://docs.google.com/spreadsheets/d/1SIT5M22iHfbWwnDE_22HmapL0aivrcLRlH7dbzH-7XQ/edit#gid=765481763
@@ -13,7 +13,7 @@ import_files:
 	python download-csv-from-google-sheets.py \
 	  '${GOOGLE_AUTH_SECRET}' \
 	  '${DRIVE_ID}' \
-	  'policy-schema!A1:L' > ${SCHEMA_DIR}/schema.csv
+	  'agent-schema!A1:L' > ${SCHEMA_DIR}/schema.csv
 	python download-csv-from-google-sheets.py \
 	  '${GOOGLE_AUTH_SECRET}' \
 	  '${DRIVE_ID}' \
@@ -21,4 +21,4 @@ import_files:
 	python download-csv-from-google-sheets.py \
       '${GOOGLE_AUTH_SECRET}' \
       '${DRIVE_ID}' \
-      'policy-samples!A1:H' > ${EVENTS_DIR}/samples.csv
+      'agent-profile-samples!A1:U' > ${EVENTS_DIR}/samples.csv

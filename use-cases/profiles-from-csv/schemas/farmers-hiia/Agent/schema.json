@@ -1,8 +1,8 @@
 {
-  "name": "farmers-hiia/Policy",
-  "title": "farmers-hiia/Policy",
-  "profileType": "farmers-hiia/Policy",
-  "description": "farmers-hiia/Policy",
+  "name": "farmers-hiia/Agent",
+  "title": "farmers-hiia/Agent",
+  "profileType": "farmers-hiia/Agent",
+  "description": "farmers-hiia/Agent",
   "attributes": [
     {
       "description": "Agent Id, unique for each agent of Farmers",
@@ -496,6 +496,136 @@
       "label": "sources",
       "description": "sources",
       "context": "cortex/profile-attribute-facet"
+    }
+  ],
+  "taxonomy": [
+    {
+      "name": "agentdemographic",
+      "label": "Agent Demographic",
+      "tags": [
+        "sources/agentdemographic",
+        "attr/assigned",
+        "assigned"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "other",
+      "label": "Other",
+      "tags": [
+        "groups/other",
+        "attr/declared",
+        "declared"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "underwriting",
+      "label": "Underwriting",
+      "tags": [
+        "groups/underwriting",
+        "attr/observed",
+        "observed"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "salesmarketing",
+      "label": "Sales & Marketing",
+      "tags": [
+        "groups/salesmarketing",
+        "attr/inferred",
+        "inferred"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "docsimilarity",
+      "label": "Document Similarity",
+      "parent": "underwriting",
+      "tags": [
+        "groups/documentsimilarity"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "rateevasion",
+      "label": "Rate Evasion",
+      "parent": "underwriting",
+      "tags": [
+        "groups/rateevasion"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "leadagentmatching",
+      "label": "Lead Agent Matching",
+      "parent": "salesmarketing",
+      "tags": [
+        "groups/leadagentmatching"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "agentactivity",
+      "label": "Agent Activity",
+      "tags": [
+        "groups/agentactivity"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "hiia",
+      "label": "Home Insurance Image Analysis",
+      "parent": "rateevasion",
+      "tags": [
+        "groups/hiia"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "policies",
+      "label": "Policies submitted by agent",
+      "parent": "agentactivity",
+      "tags": [
+        "groups/policies"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "documents",
+      "label": "Documents submitted by agent",
+      "parent": "policies",
+      "tags": [
+        "groups/documents"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "policyinfo",
+      "label": "Policy information",
+      "tags": [
+        "sources/policyinfo"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "policytype",
+      "label": "Policy Types",
+      "parent": "policies",
+      "tags": [
+        "groups/policytype"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "imagetype",
+      "label": "Type of images",
+      "parent": "policytype",
+      "tags": [
+        "groups/imagetype"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
     }
   ]
 }

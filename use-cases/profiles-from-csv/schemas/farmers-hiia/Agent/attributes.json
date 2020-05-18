@@ -1,8 +1,8 @@
 {
-  "name": "farmers-hiia/Policy",
-  "title": "farmers-hiia/Policy",
-  "profileType": "farmers-hiia/Policy",
-  "description": "farmers-hiia/Policy",
+  "name": "farmers-hiia/Agent",
+  "title": "farmers-hiia/Agent",
+  "profileType": "farmers-hiia/Agent",
+  "description": "farmers-hiia/Agent",
   "attributes": [
     {
       "description": "Agent Id, unique for each agent of Farmers",

@@ -5,7 +5,7 @@ SCHEMA_DIR := ${MAKEFILE_DIR}/schemas/${SCHEMA}
 EVENTS_DIR := ${MAKEFILE_DIR}/events/${SCHEMA}
 PROFILE_TYPE := ${SCHEMA}
 
-GOOGLE_AUTH_SECRET := /Users/oeid/Downloads/project-id-0905112707509830376-028dc8bad02b.json
+GOOGLE_AUTH_SECRET := ${HOME}/.secrets/project-id-0905112707509830376-028dc8bad02b.json
 
 activate:
 	@echo "conda activate --stack ${CONDA_ENV}"
@@ -19,9 +19,11 @@ dirs:
 	mkdir -p ${EVENTS_DIR}
 
 schema_deps: dirs ${IMPORT_FILES}
+	@echo 'Secrets file must live here: ${GOOGLE_AUTH_SECRET}' && test -f '${GOOGLE_AUTH_SECRET}'
 	@echo 'Schema must live here: ${SCHEMA_DIR}/schema.csv' && test -f '${SCHEMA_DIR}/schema.csv'
 
 event_deps: dirs ${IMPORT_FILES}
+	@echo 'Secrets file must live here: ${GOOGLE_AUTH_SECRET}' && test -f '${GOOGLE_AUTH_SECRET}'
 	@echo 'Sample Events must live here: ${EVENTS_DIR}/samples.csv' && test -f '${EVENTS_DIR}/samples.csv'
 
 from_csv_schema_to_json_schema: schema_deps

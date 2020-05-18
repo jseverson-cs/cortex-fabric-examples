@@ -1,0 +1,19 @@
+{"event":"agencyAgentNumber","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":"29253R","context":"cortex/attribute-value-string"}}
+{"event":"agencyAgentName","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":"KEUN HUR","context":"cortex/attribute-value-string"}}
+{"event":"agentAge","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":58,"context":"cortex/attribute-value-number"}}
+{"event":"isAnActiveAgent","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":false,"context":"cortex/attribute-value-boolean"}}
+{"event":"agentWorkCity","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":"CYPRESS","context":"cortex/attribute-value-string"}}
+{"event":"agentWorkState","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":"CA","context":"cortex/attribute-value-string"}}
+{"event":"numberOfDocumentsSubmitted","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":1122,"context":"cortex/attribute-value-number"}}
+{"event":"numberOfDocumentsSubmitted.approved.count","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":2,"context":"cortex/attribute-value-number"}}
+{"event":"numberOfDocumentsSubmitted.rejected.count","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":5,"context":"cortex/attribute-value-number"}}
+{"event":"latestDocumentSubmissionDate","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":"2019-05-31T00:00:00.000Z","context":"cortex/attribute-value-datetime"}}
+{"event":"latestDocumentModifiedDate","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":"2019-05-31T00:00:00.000Z","context":"cortex/attribute-value-datetime"}}
+{"event":"numberOfDocumentsSubmitted.affinity.count","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":1055,"context":"cortex/attribute-value-number"}}
+{"event":"numberOfDocumentsSubmitted.goodStudent.count","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":67,"context":"cortex/attribute-value-number"}}
+{"event":"numberOfDocumentsSubmitted.priorInsurance.count","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":0,"context":"cortex/attribute-value-number"}}
+{"event":"numberOfDocumentsSubmitted.image.count","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":60,"context":"cortex/attribute-value-number"}}
+{"event":"numberOfDocumentsSubmitted.text.count","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":1062,"context":"cortex/attribute-value-number"}}
+{"event":"numberOfSimilarDocumentPairsSubmitted","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":2003,"context":"cortex/attribute-value-number"}}
+{"event":"numberOfDocumentPairsSubmitted.image.count","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":463209,"context":"cortex/attribute-value-number"}}
+{"event":"numberOfDocumentsSubmitted.blank.count","entityId":"CA-CYPRESS-KEUN-HUR","entityType":"farmers-hiia/Agent","properties":{"value":0,"context":"cortex/attribute-value-number"}}

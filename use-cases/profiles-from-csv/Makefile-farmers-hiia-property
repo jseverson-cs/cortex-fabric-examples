@@ -5,19 +5,19 @@ PROFILE_TYPE := fi/Property
 include Makefile
 SCHEMA_DIR := ${MAKEFILE_DIR}/schemas/v2-${SCHEMA}
 EVENTS_DIR := ${MAKEFILE_DIR}/events/v2-${SCHEMA}
+DRIVE_ID := 12lCPaKogTJx9d5GMZsG7VGI_eu-idFIPEZLoNpOHwyI
 
 # https://docs.google.com/spreadsheets/d/12lCPaKogTJx9d5GMZsG7VGI_eu-idFIPEZLoNpOHwyI/edit#gid=1168186011
 import_files:
 	python download-csv-from-google-sheets.py \
-	  '/Users/oeid/Downloads/project-id-0905112707509830376-028dc8bad02b.json' \
-	  '12lCPaKogTJx9d5GMZsG7VGI_eu-idFIPEZLoNpOHwyI' \
+	  '${GOOGLE_AUTH_SECRET}' \
+	  '${DRIVE_ID}' \
 	  'property-schema!A1:L' > ${SCHEMA_DIR}/schema.csv
 	python download-csv-from-google-sheets.py \
-	  '/Users/oeid/Downloads/project-id-0905112707509830376-028dc8bad02b.json' \
-	  '12lCPaKogTJx9d5GMZsG7VGI_eu-idFIPEZLoNpOHwyI' \
+	  '${GOOGLE_AUTH_SECRET}' \
+	  '${DRIVE_ID}' \
 	  'taxonomy!A1:G' > ${SCHEMA_DIR}/taxonomy.csv
 	python download-csv-from-google-sheets.py \
-          '/Users/oeid/Downloads/project-id-0905112707509830376-028dc8bad02b.json' \
-          '12lCPaKogTJx9d5GMZsG7VGI_eu-idFIPEZLoNpOHwyI' \
-          'property-samples!A1:N' > ${EVENTS_DIR}/samples.csv
-
+      '${GOOGLE_AUTH_SECRET}' \
+      '${DRIVE_ID}' \
+      'property-samples!A1:N' > ${EVENTS_DIR}/samples.csv
