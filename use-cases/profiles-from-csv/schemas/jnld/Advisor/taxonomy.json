@@ -1,0 +1,58 @@
+{
+  "taxonomy": [
+    {
+      "name": "general",
+      "label": "General",
+      "description": "General information regarding the advisor.",
+      "tags": [
+        "group/general"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "account",
+      "label": "Account",
+      "description": "Information regarding the advisor's account.",
+      "tags": [
+        "group/account"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "classification",
+      "label": "Classification",
+      "description": "Information regarding how the advisor is classified.",
+      "tags": [
+        "group/classification"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "wholesalers",
+      "label": "Wholesalers",
+      "description": "Information regarding wholesalers assoicated with this advisor.",
+      "tags": [
+        "group/wholesalers"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "identifiers",
+      "label": "Identifiers",
+      "description": "Information regarding the different ways the advisor is identified by.",
+      "tags": [
+        "group/identifiers"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "signals",
+      "label": "Signals",
+      "description": "Aggregations capturing the advisors involvement with different signals",
+      "tags": [
+        "group/signals"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    }
+  ]
+}

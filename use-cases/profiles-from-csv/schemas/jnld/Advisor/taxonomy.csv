@@ -1,0 +1,7 @@
+name,label,description,parent,tag1
+general,General,General information regarding the advisor.,,group/general
+account,Account,Information regarding the advisor's account.,,group/account
+classification,Classification,Information regarding how the advisor is classified.,,group/classification
+wholesalers,Wholesalers,Information regarding wholesalers assoicated with this advisor.,,group/wholesalers
+identifiers,Identifiers,Information regarding the different ways the advisor is identified by.,,group/identifiers
+signals,Signals,Aggregations capturing the advisors involvement with different signals,,group/signals

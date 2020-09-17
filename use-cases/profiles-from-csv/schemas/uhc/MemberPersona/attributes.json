@@ -1,0 +1,222 @@
+{
+  "name": "uhc/MemberPersona",
+  "title": "uhc/MemberPersona",
+  "profileType": "uhc/MemberPersona",
+  "description": "uhc/MemberPersona",
+  "attributes": [
+    {
+      "description": "What is the average age of UHC Members in this persona?",
+      "label": "Age",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/demographics",
+        "attr/inferred"
+      ],
+      "name": "age.average"
+    },
+    {
+      "description": "How many years does the average age of members of this persona deviate from the average age of members as a whole?",
+      "label": "Age Deviation",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/demographics",
+        "attr/observed"
+      ],
+      "name": "age.deviationFromAverage"
+    },
+    {
+      "description": "For each channel, what percentage of the members in this persona were acquired through that channel?",
+      "label": "Channel Occurance",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "uhc/Channel",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/channel",
+        "attr/inferred"
+      ],
+      "name": "channel.occurance"
+    },
+    {
+      "description": "For each channel, how does the percentage of members that were acquired through a specific channel compare with percentage of members that are generally acquired through the same channel?",
+      "label": "Channel Deviation",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "uhc/Channel",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/channel",
+        "attr/observed"
+      ],
+      "name": "channel.deviation"
+    },
+    {
+      "description": "For each different family status, what percentage of the members in this persona share the same family status?",
+      "label": "Channel Occurance",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/demographics",
+        "attr/inferred"
+      ],
+      "name": "familyStatus.occurance"
+    },
+    {
+      "description": "For each different family status, how does the percentage of members that share the same family status within the persona compare with percentage of members that generally share the same family status?",
+      "label": "Channel Deviation",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/demographics",
+        "attr/observed"
+      ],
+      "name": "familyStatus.deviation"
+    },
+    {
+      "description": "For each different gender, what percentage of the members in this persona share the same gender?",
+      "label": "Gender Occurance",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/demographics",
+        "attr/inferred"
+      ],
+      "name": "gender.occurance"
+    },
+    {
+      "description": "For each different gender, how does the percentage of members that share the same gender within the persona compare with percentage of members that generally share the same gender?",
+      "label": "Gender Deviation",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/demographics",
+        "attr/observed"
+      ],
+      "name": "gender.deviation"
+    }
+  ],
+  "attributeTags": [
+    {
+      "name": "attr/inferred",
+      "label": "inferred",
+      "description": "attr/inferred",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "attr/observed",
+      "label": "observed",
+      "description": "attr/observed",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/channel",
+      "label": "channel",
+      "description": "group/channel",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/demographics",
+      "label": "demographics",
+      "description": "group/demographics",
+      "context": "cortex/profile-attribute-tag"
+    }
+  ],
+  "facets": [
+    {
+      "tags": [
+        "attr/inferred",
+        "attr/observed"
+      ],
+      "name": "attr",
+      "label": "attr",
+      "description": "attr",
+      "context": "cortex/profile-attribute-facet"
+    },
+    {
+      "tags": [
+        "group/channel",
+        "group/demographics"
+      ],
+      "name": "group",
+      "label": "group",
+      "description": "group",
+      "context": "cortex/profile-attribute-facet"
+    }
+  ]
+}

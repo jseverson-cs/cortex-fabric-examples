@@ -1,0 +1,49 @@
+{
+  "taxonomy": [
+    {
+      "name": "info",
+      "label": "Info",
+      "description": "General Info regarding the seminar.",
+      "tags": [
+        "group/info"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "venue",
+      "label": "Venue",
+      "description": "Info regarding venue of seminar",
+      "tags": [
+        "group/venue"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "wholesaler",
+      "label": "Wholesaler",
+      "description": "Info regarding the wholesaler hosting the seminar.",
+      "tags": [
+        "group/wholesaler"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "account",
+      "label": "Account",
+      "description": "General Info regarding the account associated with the seminer?",
+      "tags": [
+        "group/account"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "advisors",
+      "label": "Advisors",
+      "description": "General Info regarding the adivsors that attended the seminar?",
+      "tags": [
+        "group/advisors"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    }
+  ]
+}

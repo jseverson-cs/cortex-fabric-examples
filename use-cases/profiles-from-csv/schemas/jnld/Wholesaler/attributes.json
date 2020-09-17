@@ -1,0 +1,184 @@
+{
+  "name": "jnld/Wholesaler",
+  "title": "jnld/Wholesaler",
+  "profileType": "jnld/Wholesaler",
+  "description": "jnld/Wholesaler",
+  "attributes": [
+    {
+      "description": "What advisors that have become fallen angels is this wholesaler associated with?",
+      "label": "Fallen Angles",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/profile-link",
+            "innerTypes": [
+              {
+                "outerType": "jnld/Advisor",
+                "innerTypes": []
+              }
+            ]
+          }
+        ]
+      },
+      "tags": [
+        "group/advisors",
+        "attr/observed"
+      ],
+      "name": "FallenAngels"
+    },
+    {
+      "description": "What advisors that are producers is this wholesaler associated with?",
+      "label": "Producers",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/profile-link",
+            "innerTypes": [
+              {
+                "outerType": "jnld/Advisor",
+                "innerTypes": []
+              }
+            ]
+          }
+        ]
+      },
+      "tags": [
+        "group/advisors",
+        "attr/observed"
+      ],
+      "name": "Producers"
+    },
+    {
+      "description": "What advisors that are prospects is this wholesaler associated with?",
+      "label": "Prospects",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/profile-link",
+            "innerTypes": [
+              {
+                "outerType": "jnld/Advisor",
+                "innerTypes": []
+              }
+            ]
+          }
+        ]
+      },
+      "tags": [
+        "group/advisors",
+        "attr/observed"
+      ],
+      "name": "Prospects"
+    },
+    {
+      "description": "What is the id of the wholesaler?",
+      "label": "Wholesaler ID",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/info",
+        "attr/declared"
+      ],
+      "name": "Wholesaler-ID"
+    },
+    {
+      "description": "What is the first name of the Wholesaler this Advisor is associated with?",
+      "label": "EWS First Name",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/info",
+        "attr/declared"
+      ],
+      "name": "EWS-FirstName"
+    },
+    {
+      "description": "What is the last name of the Wholesaler this Advisor is associated with?",
+      "label": "EWS Last Name",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/info",
+        "attr/declared"
+      ],
+      "name": "EWS-LastName"
+    },
+    {
+      "description": "What territory is the wholesaler responsible for?",
+      "label": "Territory",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/info",
+        "attr/declared"
+      ],
+      "name": "Territory"
+    }
+  ],
+  "attributeTags": [
+    {
+      "name": "attr/declared",
+      "label": "declared",
+      "description": "attr/declared",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "attr/observed",
+      "label": "observed",
+      "description": "attr/observed",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/advisors",
+      "label": "advisors",
+      "description": "group/advisors",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/info",
+      "label": "info",
+      "description": "group/info",
+      "context": "cortex/profile-attribute-tag"
+    }
+  ],
+  "facets": [
+    {
+      "tags": [
+        "attr/declared",
+        "attr/observed"
+      ],
+      "name": "attr",
+      "label": "attr",
+      "description": "attr",
+      "context": "cortex/profile-attribute-facet"
+    },
+    {
+      "tags": [
+        "group/advisors",
+        "group/info"
+      ],
+      "name": "group",
+      "label": "group",
+      "description": "group",
+      "context": "cortex/profile-attribute-facet"
+    }
+  ]
+}

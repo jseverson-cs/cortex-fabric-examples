@@ -1,0 +1,11 @@
+{"event":"AdvisorList","entityId":"sem-123","entityType":"jnld/Seminar","properties":{"value":[{"profileId":"adv-123","schemaId":"jnld/Advisor","context":"cortex/profile-link"}],"context":"cortex/attribute-value-list"}}
+{"event":"Seminar-ID","entityId":"sem-123","entityType":"jnld/Seminar","properties":{"value":"sem-123","context":"cortex/attribute-value-string"}}
+{"event":"Location","entityId":"sem-123","entityType":"jnld/Seminar","properties":{"value":"Austin, Tx","context":"cortex/attribute-value-string"}}
+{"event":"Date","entityId":"sem-123","entityType":"jnld/Seminar","properties":{"value":"2020-10-15T07:00:00.000Z","context":"cortex/attribute-value-datetime"}}
+{"event":"Agenda","entityId":"sem-123","entityType":"jnld/Seminar","properties":{"value":"Sell Stuff","context":"cortex/attribute-value-string"}}
+{"event":"Speaker","entityId":"sem-123","entityType":"jnld/Seminar","properties":{"value":"Eric Thomas","context":"cortex/attribute-value-string"}}
+{"event":"Wholesaler-ID","entityId":"sem-123","entityType":"jnld/Seminar","properties":{"profileId":"ws-123","schemaId":"jnld/Wholesaler","context":"cortex/profile-link"}}
+{"event":"EWS-FirstName","entityId":"sem-123","entityType":"jnld/Seminar","properties":{"value":"Walter","context":"cortex/attribute-value-string"}}
+{"event":"EWS-LastName","entityId":"sem-123","entityType":"jnld/Seminar","properties":{"value":"Wyatt","context":"cortex/attribute-value-string"}}
+{"event":"Account-ID","entityId":"sem-123","entityType":"jnld/Seminar","properties":{"value":"acc-123","context":"cortex/attribute-value-string"}}
+{"event":"AccountName","entityId":"sem-123","entityType":"jnld/Seminar","properties":{"value":"Account 123","context":"cortex/attribute-value-string"}}

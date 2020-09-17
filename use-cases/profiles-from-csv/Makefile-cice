@@ -5,7 +5,7 @@ PROFILE_ID := fake-bob
 
 IMPORT_FILES=import_files
 
-include Makefile
+include Makefile.common
 
 # https://docs.google.com/spreadsheets/d/1Go78fdkdRuJw2Mq8LHp0nVaCGvpEHoAnF4BRY5AFIkc/edit#gid=1187872843
 GOOGLE_SHEET_ID := 1Go78fdkdRuJw2Mq8LHp0nVaCGvpEHoAnF4BRY5AFIkc

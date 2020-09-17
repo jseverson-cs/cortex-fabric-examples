@@ -1,0 +1,12 @@
+name,label,parent,tag1
+info,Info,,group/info
+intersection,Intersections,,group/intersetion
+social-intersection,Social,intersection,group/social-intersection
+neustar-intersection,Neustar,intersection,group/neustar-intersection
+uhc-intersection,UnitedHealthcare,intersection,group/uhc-intersection
+keyword-intersection,UHC Keywords,uhc-intersection,group/keyword-intersection
+campaign-performance-intersection,UHC Campaigns,uhc-intersection,group/campaign-performance-intersection
+member-intersection,UHC Members,uhc-intersection,group/member-intersection
+trendiness,Trendiness,,group/trendiness
+demographics,Demographics,,group/demographics
+performance,Performance,,group/persona-performance

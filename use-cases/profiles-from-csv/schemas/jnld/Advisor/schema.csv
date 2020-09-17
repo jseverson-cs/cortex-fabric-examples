@@ -1,0 +1,23 @@
+attributeKey,description,label,tag1,tag2,tag3,type,valueType,innerType1,innerType2,LinkToOtherProfiles,UpdateFrequency
+Party-ID,What is the id of the advisor?,Party ID,group/general,attr/declared,,declared,string,,,NO,Rarely
+FirstName,What is the advisor's first name?,First Name,group/general,attr/declared,,declared,string,,,NO,Rarely
+LastName,What is the advisor's last name?,Last Name,group/general,attr/declared,,declared,string,,,NO,Rarely
+Tenure,What is the advisor's tenure? How long have they been with Jackson?,Tenure,group/general,attr/declared,,declared,string,,,NO,Rarely
+AgeGrp,What is the advisor's age group?,Age Group,group/general,attr/declared,,declared,string,,,NO,Rarely
+DOB,What is the advisor's date of birth?,DOB,group/general,attr/declared,,declared,datetime,,,NO,Rarely
+AdvisorType,What is the type of this advisor?,Advisor Type,group/classification,attr/declared,,declared,string,,,NO,Rarely
+Segmentation,What segment is this advisor a member of?,Segment,group/classification,attr/declared,,declared,string,,,NO,Rarely
+Wholesaler-ID,What is the id of the Wholesaler this Advisor is associated with?,Wholesaler ID,group/wholesalers,attr/declared,,declared,profile-rel,jnld/Wholesaler,,YES,Rarely
+EWS-FirstName,What is the first name of the Wholesaler this Advisor is associated with?,EWS First Name,group/wholesalers,attr/declared,,declared,string,,,NO,Rarely
+EWS-LastName,What is the last name of the Wholesaler this Advisor is associated with?,EWS Last Name,group/wholesalers,attr/declared,,declared,string,,,NO,Rarely
+Account-ID,What is the id of the advisor's account?,EWS Account ID,group/account,attr/declared,,declared,string,,,NO,Rarely
+AccountName,What is the name of the advisor's account?,EWS Account Name,group/account,attr/declared,,declared,string,,,NO,Rarely
+aggs.90d.startdate,When date do we start considering signals when doing 90d aggregations?,Aggregates Start,group/signals,attr/observed,,observed,datetime,,,NO,Every Quarter
+aggs.90d.enddate,When date do we stop considering signals when doing 90d aggregations?,Aggregates End,group/signals,attr/observed,,observed,datetime,,,NO,Every Quarter
+aggs.90d.activities.count,How many unique activities has the advisor performed within the relevant 90d window?,Activity Counter,group/signals,attr/observed,,observed,number,,,NO,Every Quarter
+aggs.90d.illustrations.count,How many illustrations has the advisor performed within the relevant 90d window?,Illustration Counter,group/signals,attr/observed,,observed,number,,,NO,Every Quarter
+aggs.90d.appointments.count,How many appointments has the advisor performed within the relevant 90d window?,Appointment Counter,group/signals,attr/observed,,observed,number,,,NO,Every Quarter
+aggs.90d.calls.count,How many calls has the advisor performed within the relevant 90d window?,Call Counter,group/signals,attr/observed,,observed,number,,,NO,Every Quarter
+aggs.90d.sales.amount,How much in sales has the advisor performed within the relevant 90d window?,Total Sales,group/signals,attr/observed,,observed,number,,,NO,Every Quarter
+aggs.90d.sales.count,How many unique sales has the advisor performed within the relevant 90d window?,Sale Counter,group/signals,attr/observed,,observed,number,,,NO,Every Quarter
+aggs.90d.rsvp.count,How many rsvps has the advisor performed within the relevant 90d window?,RSVP Counter,group/signals,attr/observed,,observed,number,,,NO,Every Quarter

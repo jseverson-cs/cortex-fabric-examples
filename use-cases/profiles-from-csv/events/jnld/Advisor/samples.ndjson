@@ -1,0 +1,22 @@
+{"event":"Party-ID","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":"adv-123","context":"cortex/attribute-value-string"}}
+{"event":"FirstName","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":"Alice","context":"cortex/attribute-value-string"}}
+{"event":"LastName","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":"Arianna","context":"cortex/attribute-value-string"}}
+{"event":"Tenure","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":"Producer","context":"cortex/attribute-value-string"}}
+{"event":"AgeGrp","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":"40-45","context":"cortex/attribute-value-string"}}
+{"event":"DOB","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":"1977-02-12T08:00:00.000Z","context":"cortex/attribute-value-datetime"}}
+{"event":"AdvisorType","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":"Internal","context":"cortex/attribute-value-string"}}
+{"event":"Segmentation","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":"Producer","context":"cortex/attribute-value-string"}}
+{"event":"Wholesaler-ID","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"profileId":"ws-123","schemaId":"jnld/Wholesaler","context":"cortex/profile-link"}}
+{"event":"EWS-FirstName","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":"Walter","context":"cortex/attribute-value-string"}}
+{"event":"EWS-LastName","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":"Wyatt","context":"cortex/attribute-value-string"}}
+{"event":"Account-ID","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":"acc-123","context":"cortex/attribute-value-string"}}
+{"event":"AccountName","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":"Account 123","context":"cortex/attribute-value-string"}}
+{"event":"aggs.90d.startdate","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":"2020-06-18T07:00:00.000Z","context":"cortex/attribute-value-datetime"}}
+{"event":"aggs.90d.enddate","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":"2020-09-16T07:00:00.000Z","context":"cortex/attribute-value-datetime"}}
+{"event":"aggs.90d.activities.count","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":452,"context":"cortex/attribute-value-number"}}
+{"event":"aggs.90d.illustrations.count","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":12,"context":"cortex/attribute-value-number"}}
+{"event":"aggs.90d.appointments.count","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":43,"context":"cortex/attribute-value-number"}}
+{"event":"aggs.90d.calls.count","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":1002,"context":"cortex/attribute-value-number"}}
+{"event":"aggs.90d.sales.amount","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":45230,"context":"cortex/attribute-value-number"}}
+{"event":"aggs.90d.sales.count","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":34,"context":"cortex/attribute-value-number"}}
+{"event":"aggs.90d.rsvp.count","entityId":"adv-123","entityType":"jnld/Advisor","properties":{"value":1,"context":"cortex/attribute-value-number"}}

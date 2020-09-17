@@ -1,0 +1,7 @@
+{"event":"FallenAngels","entityId":"ws-123","entityType":"jnld/Wholesaler","properties":{"value":[{"profileId":"adv-123","schemaId":"jnld/Advisor","context":"cortex/profile-link"}],"context":"cortex/attribute-value-list"}}
+{"event":"Producers","entityId":"ws-123","entityType":"jnld/Wholesaler","properties":{"value":[{"profileId":"adv-123","schemaId":"jnld/Advisor","context":"cortex/profile-link"}],"context":"cortex/attribute-value-list"}}
+{"event":"Prospects","entityId":"ws-123","entityType":"jnld/Wholesaler","properties":{"value":[{"profileId":"adv-123","schemaId":"jnld/Advisor","context":"cortex/profile-link"}],"context":"cortex/attribute-value-list"}}
+{"event":"Wholesaler-ID","entityId":"ws-123","entityType":"jnld/Wholesaler","properties":{"value":"ws-123","context":"cortex/attribute-value-string"}}
+{"event":"EWS-FirstName","entityId":"ws-123","entityType":"jnld/Wholesaler","properties":{"value":"Walter","context":"cortex/attribute-value-string"}}
+{"event":"EWS-LastName","entityId":"ws-123","entityType":"jnld/Wholesaler","properties":{"value":"Wyatt","context":"cortex/attribute-value-string"}}
+{"event":"Territory","entityId":"ws-123","entityType":"jnld/Wholesaler","properties":{"value":"Producer","context":"cortex/attribute-value-string"}}

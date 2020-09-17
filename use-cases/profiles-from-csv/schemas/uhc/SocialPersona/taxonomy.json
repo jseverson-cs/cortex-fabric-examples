@@ -1,0 +1,98 @@
+{
+  "taxonomy": [
+    {
+      "name": "info",
+      "label": "Info",
+      "tags": [
+        "group/info"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "intersection",
+      "label": "Intersections",
+      "tags": [
+        "group/intersetion"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "social-intersection",
+      "label": "Social",
+      "parent": "intersection",
+      "tags": [
+        "group/social-intersection"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "neustar-intersection",
+      "label": "Neustar",
+      "parent": "intersection",
+      "tags": [
+        "group/neustar-intersection"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "uhc-intersection",
+      "label": "UnitedHealthcare",
+      "parent": "intersection",
+      "tags": [
+        "group/uhc-intersection"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "keyword-intersection",
+      "label": "UHC Keywords",
+      "parent": "uhc-intersection",
+      "tags": [
+        "group/keyword-intersection"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "campaign-performance-intersection",
+      "label": "UHC Campaigns",
+      "parent": "uhc-intersection",
+      "tags": [
+        "group/campaign-performance-intersection"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "member-intersection",
+      "label": "UHC Members",
+      "parent": "uhc-intersection",
+      "tags": [
+        "group/member-intersection"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "trendiness",
+      "label": "Trendiness",
+      "tags": [
+        "group/trendiness"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "demographics",
+      "label": "Demographics",
+      "tags": [
+        "group/demographics"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "performance",
+      "label": "Performance",
+      "tags": [
+        "group/persona-performance"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    }
+  ]
+}

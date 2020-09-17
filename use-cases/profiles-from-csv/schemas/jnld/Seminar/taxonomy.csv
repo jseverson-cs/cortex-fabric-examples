@@ -1,0 +1,6 @@
+name,label,description,parent,tag1
+info,Info,General Info regarding the seminar.,,group/info
+venue,Venue,Info regarding venue of seminar,,group/venue
+wholesaler,Wholesaler,Info regarding the wholesaler hosting the seminar.,,group/wholesaler
+account,Account,General Info regarding the account associated with the seminer?,,group/account
+advisors,Advisors,General Info regarding the adivsors that attended the seminar?,,group/advisors

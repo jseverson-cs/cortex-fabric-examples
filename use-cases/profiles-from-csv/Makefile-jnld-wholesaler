@@ -1,0 +1,14 @@
+CONDA_ENV := jnld
+IMPORT_FILES=import_files
+SCHEMA := jnld/Wholesaler
+PROFILE_TYPE := jnld/Wholesaler
+
+include Makefile.common
+
+DRIVE_ID := 1mmcpf3-aACmS0Gw-rjw3edikgZUlpLA9QL7ckvBRfTo
+CORTEX_PROFILE := jackson_azure_byok_dev01
+SHEET_PREFIX := wholesaler
+
+# Google Drive ID: 1mmcpf3-aACmS0Gw-rjw3edikgZUlpLA9QL7ckvBRfTo
+# https://docs.google.com/spreadsheets/d/1mmcpf3-aACmS0Gw-rjw3edikgZUlpLA9QL7ckvBRfTo/edit#gid=765481763
+# po1-schema-generator-script@project-id-0905112707509830376.iam.gserviceaccount.com

@@ -4,7 +4,7 @@ CONDA_ENV := project-nbc
 SCHEMA := nbc/Viewer
 PROFILE_ID := viewer-1
 
-include Makefile
+include Makefile.common
 
 import_files_nbc_viewer:
 	cp ${HOME}/Downloads/'NBC Profile Attributes - ViewerSchema.csv' ${SCHEMA_DIR}/schema.csv || true

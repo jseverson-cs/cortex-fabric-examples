@@ -1,0 +1,30 @@
+CONDA_ENV := uhc
+IMPORT_FILES=import_files
+SCHEMA := uhc/MemberPersona
+PROFILE_TYPE := uhc/MemberPersona
+include Makefile.common
+SCHEMA_DIR := ${MAKEFILE_DIR}/schemas/${SCHEMA}
+EVENTS_DIR := ${MAKEFILE_DIR}/events/${SCHEMA}
+DRIVE_ID := 1fvzcYBGOoU8trKvxovtkSimfObWT1TIly7hYOc0FCEA
+CORTEX_PROFILE := uhc-stage
+SHEET_PREFIX := member-persona
+# Google Drive ID: 1fvzcYBGOoU8trKvxovtkSimfObWT1TIly7hYOc0FCEA
+# https://docs.google.com/spreadsheets/d/1fvzcYBGOoU8trKvxovtkSimfObWT1TIly7hYOc0FCEA/edit#gid=765481763
+# po1-schema-generator-script@project-id-0905112707509830376.iam.gserviceaccount.com
+
+switch: 
+	test "${CORTEX_PROFILE}" = "${CLI_PROFILE}" || cortex configure set-profile "${CORTEX_PROFILE}"
+
+import_files: switch
+	python download-csv-from-google-sheets.py \
+	  '${GOOGLE_AUTH_SECRET}' \
+	  '${DRIVE_ID}' \
+	  '${SHEET_PREFIX}-schema!A1:L' > ${SCHEMA_DIR}/schema.csv
+	python download-csv-from-google-sheets.py \
+	  '${GOOGLE_AUTH_SECRET}' \
+	  '${DRIVE_ID}' \
+	  '${SHEET_PREFIX}-taxonomy!A1:H' > ${SCHEMA_DIR}/taxonomy.csv
+	python download-csv-from-google-sheets.py \
+      '${GOOGLE_AUTH_SECRET}' \
+      '${DRIVE_ID}' \
+      '${SHEET_PREFIX}-profile-samples!A1:Z' > ${EVENTS_DIR}/samples.csv

@@ -1,0 +1,3 @@
+name,label,description,parent,tag1
+info,Info,Genearl Info,,group/info
+advisors,Advisors,Info regarding advisors of wholesaler,,group/advisors

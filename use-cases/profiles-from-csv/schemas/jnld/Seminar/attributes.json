@@ -1,0 +1,234 @@
+{
+  "name": "jnld/Seminar",
+  "title": "jnld/Seminar",
+  "profileType": "jnld/Seminar",
+  "description": "jnld/Seminar",
+  "attributes": [
+    {
+      "description": "Who are the advisors assoicated with this seminar?",
+      "label": "Advisors",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/profile-link",
+            "innerTypes": [
+              {
+                "outerType": "jnld/Advisor",
+                "innerTypes": []
+              }
+            ]
+          }
+        ]
+      },
+      "tags": [
+        "group/advisors",
+        "attr/observed"
+      ],
+      "name": "AdvisorList"
+    },
+    {
+      "description": "What is the ID of the semianr?",
+      "label": "Seminar ID",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/info",
+        "attr/declared"
+      ],
+      "name": "Seminar-ID"
+    },
+    {
+      "description": "Where is the seminar located?",
+      "label": "Location",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/venue",
+        "attr/declared"
+      ],
+      "name": "Location"
+    },
+    {
+      "description": "What is the date in which the seminar will be held?",
+      "label": "Date",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-datetime",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/venue",
+        "attr/declared"
+      ],
+      "name": "Date"
+    },
+    {
+      "description": "What is the agenda of the seminar?",
+      "label": "Agenda",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/venue",
+        "attr/declared"
+      ],
+      "name": "Agenda"
+    },
+    {
+      "description": "Who is the primary speaker at the seminar?",
+      "label": "Speaker",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/venue",
+        "attr/declared"
+      ],
+      "name": "Speaker"
+    },
+    {
+      "description": "Who is the wholesaler who whosted this seminar?",
+      "label": "Wholesaler ID",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-profile-rel",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/wholesaler",
+        "attr/declared"
+      ],
+      "name": "Wholesaler-ID"
+    },
+    {
+      "description": "What is the first name of the wholesaler who whosted this seminar?",
+      "label": "EWS First Name",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/wholesaler",
+        "attr/declared"
+      ],
+      "name": "EWS-FirstName"
+    },
+    {
+      "description": "What is the last name of the wholesaler who whosted this seminar?",
+      "label": "EWS Last Name",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/wholesaler",
+        "attr/declared"
+      ],
+      "name": "EWS-LastName"
+    },
+    {
+      "description": "What is the id of the account associated with this seminar?",
+      "label": "Account ID",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/wholesaler",
+        "attr/declared"
+      ],
+      "name": "Account-ID"
+    },
+    {
+      "description": "What is the name of the account associated with this seminar?",
+      "label": "Account Name",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/wholesaler",
+        "attr/declared"
+      ],
+      "name": "AccountName"
+    }
+  ],
+  "attributeTags": [
+    {
+      "name": "attr/declared",
+      "label": "declared",
+      "description": "attr/declared",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "attr/observed",
+      "label": "observed",
+      "description": "attr/observed",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/advisors",
+      "label": "advisors",
+      "description": "group/advisors",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/info",
+      "label": "info",
+      "description": "group/info",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/venue",
+      "label": "venue",
+      "description": "group/venue",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/wholesaler",
+      "label": "wholesaler",
+      "description": "group/wholesaler",
+      "context": "cortex/profile-attribute-tag"
+    }
+  ],
+  "facets": [
+    {
+      "tags": [
+        "attr/declared",
+        "attr/observed"
+      ],
+      "name": "attr",
+      "label": "attr",
+      "description": "attr",
+      "context": "cortex/profile-attribute-facet"
+    },
+    {
+      "tags": [
+        "group/advisors",
+        "group/info",
+        "group/venue",
+        "group/wholesaler"
+      ],
+      "name": "group",
+      "label": "group",
+      "description": "group",
+      "context": "cortex/profile-attribute-facet"
+    }
+  ]
+}

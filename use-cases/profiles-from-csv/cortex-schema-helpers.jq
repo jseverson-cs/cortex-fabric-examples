@@ -9,6 +9,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Valid chars in line 34 is important!
 def simple_to_complex_value_type: (
   if . == null
   then (
@@ -30,7 +31,7 @@ def simple_to_complex_value_type: (
     else
       if test("^list")
       then (
-        capture("^list.(?<first>([a-zA-Z-/]|[[]|[]])+).$") |
+        capture("^list.(?<first>([a-z_A-Z-/]|[[]|[]])+).$") |
         {
           "outerType": "cortex/attribute-value-list",
           "innerTypes": (

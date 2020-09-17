@@ -1,0 +1,8 @@
+attributeKey,description,label,tag1,tag2,tag3,type,valueType,innerType1,innerType2,LinkToOtherProfiles,UpdateFrequency
+FallenAngels,What advisors that have become fallen angels is this wholesaler associated with?,Fallen Angles,group/advisors,attr/observed,,observed,list,jnld/Advisor,,YES,Every Quarter
+Producers,What advisors that are producers is this wholesaler associated with?,Producers,group/advisors,attr/observed,,observed,list,jnld/Advisor,,YES,Every Quarter
+Prospects,What advisors that are prospects is this wholesaler associated with?,Prospects,group/advisors,attr/observed,,observed,list,jnld/Advisor,,YES,Every Quarter
+Wholesaler-ID,What is the id of the wholesaler?,Wholesaler ID,group/info,attr/declared,,declared,string,,,NO,Rarely
+EWS-FirstName,What is the first name of the Wholesaler this Advisor is associated with?,EWS First Name,group/info,attr/declared,,declared,string,,,NO,Rarely
+EWS-LastName,What is the last name of the Wholesaler this Advisor is associated with?,EWS Last Name,group/info,attr/declared,,declared,string,,,NO,Rarely
+Territory,What territory is the wholesaler responsible for?,Territory,group/info,attr/declared,,declared,string,,,NO,Rarely

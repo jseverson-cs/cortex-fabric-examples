@@ -1,0 +1,22 @@
+{
+  "taxonomy": [
+    {
+      "name": "info",
+      "label": "Info",
+      "description": "Genearl Info",
+      "tags": [
+        "group/info"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "advisors",
+      "label": "Advisors",
+      "description": "Info regarding advisors of wholesaler",
+      "tags": [
+        "group/advisors"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    }
+  ]
+}

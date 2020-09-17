@@ -1,0 +1,341 @@
+{
+  "name": "uhc/SocialPersona",
+  "title": "uhc/SocialPersona",
+  "profileType": "uhc/SocialPersona",
+  "description": "uhc/SocialPersona",
+  "attributes": [
+    {
+      "description": "Which trending social media stories are stories are associated with this persona?",
+      "label": "Associated Stories",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/social-intersection",
+        "group/social-intersection",
+        "attr/inferred"
+      ],
+      "name": "stories"
+    },
+    {
+      "description": "Which keywords are strongly associated with this social persona?",
+      "label": "Associated Keywords",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/social-intersection",
+        "group/keyword-intersection",
+        "attr/inferred"
+      ],
+      "name": "keywords"
+    },
+    {
+      "description": "Which neustar leads are associated with this social persona?",
+      "label": "Associated Leads",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/neustar-intersection",
+        "group/neustar-intersection",
+        "attr/inferred"
+      ],
+      "name": "intersection.neustar"
+    },
+    {
+      "description": "Which UnitedHealthcare members engaged with the keywords assoicated with this peronsa?",
+      "label": "Associated Members",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/member-intersection",
+        "attr/inferred"
+      ],
+      "name": "intersection.members"
+    },
+    {
+      "description": "Which Social Mdia users are assoicated with this persona?",
+      "label": "Associated Social Users",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/social-intersection",
+        "attr/inferred"
+      ],
+      "name": "intersection.social-media-users"
+    },
+    {
+      "description": "Is the persona currently trending?",
+      "label": "Currently Trending",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-boolean",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/trendiness",
+        "attr/inferred"
+      ],
+      "name": "currently.trending"
+    },
+    {
+      "description": "How does the trendiness of this personas compare to all of the other personas also trending now?",
+      "label": "Trendiness Score",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-weight",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/trendiness",
+        "attr/inferred"
+      ],
+      "name": "scoring.trendiness"
+    },
+    {
+      "description": "How wide of a net does this peronsal cast? How many users social media users relate to this peronsa?",
+      "label": "Coverage",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/trendiness",
+        "attr/inferred"
+      ],
+      "name": "socring.coverage"
+    },
+    {
+      "description": "Where are the social media users that provide the majority of the content behind this persona located?",
+      "label": "Location of Users",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/demographics",
+        "attr/observed"
+      ],
+      "name": "posters.location"
+    },
+    {
+      "description": "What ages have been associated with this persona?",
+      "label": "Age of Leads",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/demographics",
+        "group/campaign-performance-intersection",
+        "attr/observed"
+      ],
+      "name": "demographics.age"
+    },
+    {
+      "description": "What locations have been associated with this persona?",
+      "label": "Location of Leads",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/demographics",
+        "group/campaign-performance-intersection",
+        "attr/observed"
+      ],
+      "name": "demographics.location"
+    },
+    {
+      "description": "What campaigns are possibly related to this persona?",
+      "label": "Related Campaigns",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/campaign-performance-intersection",
+        "attr/observed"
+      ],
+      "name": "related.campaigns"
+    },
+    {
+      "description": "How many UHC Leads did this persona help convert into members?",
+      "label": "Total Converted Leads",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/persona-performance",
+        "attr/observed"
+      ],
+      "name": "countOf.convertedLeads"
+    },
+    {
+      "description": "Which current UHC Members were targeted due to this persona during the lead generation phase?",
+      "label": "Converted Leads",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/member-intersection",
+        "attr/observed"
+      ],
+      "name": "convertedLeads"
+    },
+    {
+      "description": "What campaigns have we executed that were influenced by the personas?",
+      "label": "Influenced Campaigns",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/campaign-performance-intersection",
+        "attr/observed"
+      ],
+      "name": "executedCampaigns"
+    },
+    {
+      "description": "What is the id of the persona?",
+      "label": "Persona ID",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/info",
+        "attr/declared"
+      ],
+      "name": "persona-id"
+    }
+  ],
+  "attributeTags": [
+    {
+      "name": "attr/declared",
+      "label": "declared",
+      "description": "attr/declared",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "attr/inferred",
+      "label": "inferred",
+      "description": "attr/inferred",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "attr/observed",
+      "label": "observed",
+      "description": "attr/observed",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/campaign-performance-intersection",
+      "label": "campaign-performance-intersection",
+      "description": "group/campaign-performance-intersection",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/demographics",
+      "label": "demographics",
+      "description": "group/demographics",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/info",
+      "label": "info",
+      "description": "group/info",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/keyword-intersection",
+      "label": "keyword-intersection",
+      "description": "group/keyword-intersection",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/member-intersection",
+      "label": "member-intersection",
+      "description": "group/member-intersection",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/neustar-intersection",
+      "label": "neustar-intersection",
+      "description": "group/neustar-intersection",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/persona-performance",
+      "label": "persona-performance",
+      "description": "group/persona-performance",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/social-intersection",
+      "label": "social-intersection",
+      "description": "group/social-intersection",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/trendiness",
+      "label": "trendiness",
+      "description": "group/trendiness",
+      "context": "cortex/profile-attribute-tag"
+    }
+  ],
+  "facets": [
+    {
+      "tags": [
+        "attr/declared",
+        "attr/inferred",
+        "attr/observed"
+      ],
+      "name": "attr",
+      "label": "attr",
+      "description": "attr",
+      "context": "cortex/profile-attribute-facet"
+    },
+    {
+      "tags": [
+        "group/campaign-performance-intersection",
+        "group/demographics",
+        "group/info",
+        "group/keyword-intersection",
+        "group/member-intersection",
+        "group/neustar-intersection",
+        "group/persona-performance",
+        "group/social-intersection",
+        "group/trendiness"
+      ],
+      "name": "group",
+      "label": "group",
+      "description": "group",
+      "context": "cortex/profile-attribute-facet"
+    }
+  ]
+}

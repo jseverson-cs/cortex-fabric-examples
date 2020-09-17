@@ -2,7 +2,7 @@ CONDA_ENV := farmers-hiia
 IMPORT_FILES=import_files
 SCHEMA := farmers-hiia/Policy
 PROFILE_TYPE := fi/Policy
-include Makefile
+include Makefile.common
 SCHEMA_DIR := ${MAKEFILE_DIR}/schemas/${SCHEMA}
 EVENTS_DIR := ${MAKEFILE_DIR}/events/${SCHEMA}
 DRIVE_ID := 1SIT5M22iHfbWwnDE_22HmapL0aivrcLRlH7dbzH-7XQ

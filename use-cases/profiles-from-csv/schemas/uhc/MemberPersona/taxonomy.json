@@ -1,0 +1,22 @@
+{
+  "taxonomy": [
+    {
+      "name": "channel",
+      "label": "Channel",
+      "description": "Channel Attributes",
+      "tags": [
+        "group/channel"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "demographics",
+      "label": "Demographics",
+      "description": "Demographic Attributes",
+      "tags": [
+        "group/demographics"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    }
+  ]
+}

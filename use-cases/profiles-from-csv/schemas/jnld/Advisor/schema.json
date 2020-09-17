@@ -1,0 +1,441 @@
+{
+  "name": "jnld/Advisor",
+  "title": "jnld/Advisor",
+  "profileType": "jnld/Advisor",
+  "description": "jnld/Advisor",
+  "attributes": [
+    {
+      "description": "What is the id of the advisor?",
+      "label": "Party ID",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/general",
+        "attr/declared"
+      ],
+      "name": "Party-ID"
+    },
+    {
+      "description": "What is the advisor's first name?",
+      "label": "First Name",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/general",
+        "attr/declared"
+      ],
+      "name": "FirstName"
+    },
+    {
+      "description": "What is the advisor's last name?",
+      "label": "Last Name",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/general",
+        "attr/declared"
+      ],
+      "name": "LastName"
+    },
+    {
+      "description": "What is the advisor's tenure? How long have they been with Jackson?",
+      "label": "Tenure",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/general",
+        "attr/declared"
+      ],
+      "name": "Tenure"
+    },
+    {
+      "description": "What is the advisor's age group?",
+      "label": "Age Group",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/general",
+        "attr/declared"
+      ],
+      "name": "AgeGrp"
+    },
+    {
+      "description": "What is the advisor's date of birth?",
+      "label": "DOB",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-datetime",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/general",
+        "attr/declared"
+      ],
+      "name": "DOB"
+    },
+    {
+      "description": "What is the type of this advisor?",
+      "label": "Advisor Type",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/classification",
+        "attr/declared"
+      ],
+      "name": "AdvisorType"
+    },
+    {
+      "description": "What segment is this advisor a member of?",
+      "label": "Segment",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/classification",
+        "attr/declared"
+      ],
+      "name": "Segmentation"
+    },
+    {
+      "description": "What is the id of the Wholesaler this Advisor is associated with?",
+      "label": "Wholesaler ID",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-profile-rel",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/wholesalers",
+        "attr/declared"
+      ],
+      "name": "Wholesaler-ID"
+    },
+    {
+      "description": "What is the first name of the Wholesaler this Advisor is associated with?",
+      "label": "EWS First Name",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/wholesalers",
+        "attr/declared"
+      ],
+      "name": "EWS-FirstName"
+    },
+    {
+      "description": "What is the last name of the Wholesaler this Advisor is associated with?",
+      "label": "EWS Last Name",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/wholesalers",
+        "attr/declared"
+      ],
+      "name": "EWS-LastName"
+    },
+    {
+      "description": "What is the id of the advisor's account?",
+      "label": "EWS Account ID",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/account",
+        "attr/declared"
+      ],
+      "name": "Account-ID"
+    },
+    {
+      "description": "What is the name of the advisor's account?",
+      "label": "EWS Account Name",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/account",
+        "attr/declared"
+      ],
+      "name": "AccountName"
+    },
+    {
+      "description": "When date do we start considering signals when doing 90d aggregations?",
+      "label": "Aggregates Start",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-datetime",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/signals",
+        "attr/observed"
+      ],
+      "name": "aggs.90d.startdate"
+    },
+    {
+      "description": "When date do we stop considering signals when doing 90d aggregations?",
+      "label": "Aggregates End",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-datetime",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/signals",
+        "attr/observed"
+      ],
+      "name": "aggs.90d.enddate"
+    },
+    {
+      "description": "How many unique activities has the advisor performed within the relevant 90d window?",
+      "label": "Activity Counter",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/signals",
+        "attr/observed"
+      ],
+      "name": "aggs.90d.activities.count"
+    },
+    {
+      "description": "How many illustrations has the advisor performed within the relevant 90d window?",
+      "label": "Illustration Counter",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/signals",
+        "attr/observed"
+      ],
+      "name": "aggs.90d.illustrations.count"
+    },
+    {
+      "description": "How many appointments has the advisor performed within the relevant 90d window?",
+      "label": "Appointment Counter",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/signals",
+        "attr/observed"
+      ],
+      "name": "aggs.90d.appointments.count"
+    },
+    {
+      "description": "How many calls has the advisor performed within the relevant 90d window?",
+      "label": "Call Counter",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/signals",
+        "attr/observed"
+      ],
+      "name": "aggs.90d.calls.count"
+    },
+    {
+      "description": "How much in sales has the advisor performed within the relevant 90d window?",
+      "label": "Total Sales",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/signals",
+        "attr/observed"
+      ],
+      "name": "aggs.90d.sales.amount"
+    },
+    {
+      "description": "How many unique sales has the advisor performed within the relevant 90d window?",
+      "label": "Sale Counter",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/signals",
+        "attr/observed"
+      ],
+      "name": "aggs.90d.sales.count"
+    },
+    {
+      "description": "How many rsvps has the advisor performed within the relevant 90d window?",
+      "label": "RSVP Counter",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/signals",
+        "attr/observed"
+      ],
+      "name": "aggs.90d.rsvp.count"
+    }
+  ],
+  "attributeTags": [
+    {
+      "name": "attr/declared",
+      "label": "declared",
+      "description": "attr/declared",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "attr/observed",
+      "label": "observed",
+      "description": "attr/observed",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/account",
+      "label": "account",
+      "description": "group/account",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/classification",
+      "label": "classification",
+      "description": "group/classification",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/general",
+      "label": "general",
+      "description": "group/general",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/signals",
+      "label": "signals",
+      "description": "group/signals",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/wholesalers",
+      "label": "wholesalers",
+      "description": "group/wholesalers",
+      "context": "cortex/profile-attribute-tag"
+    }
+  ],
+  "facets": [
+    {
+      "tags": [
+        "attr/declared",
+        "attr/observed"
+      ],
+      "name": "attr",
+      "label": "attr",
+      "description": "attr",
+      "context": "cortex/profile-attribute-facet"
+    },
+    {
+      "tags": [
+        "group/account",
+        "group/classification",
+        "group/general",
+        "group/signals",
+        "group/wholesalers"
+      ],
+      "name": "group",
+      "label": "group",
+      "description": "group",
+      "context": "cortex/profile-attribute-facet"
+    }
+  ],
+  "taxonomy": [
+    {
+      "name": "general",
+      "label": "General",
+      "description": "General information regarding the advisor.",
+      "tags": [
+        "group/general"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "account",
+      "label": "Account",
+      "description": "Information regarding the advisor's account.",
+      "tags": [
+        "group/account"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "classification",
+      "label": "Classification",
+      "description": "Information regarding how the advisor is classified.",
+      "tags": [
+        "group/classification"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "wholesalers",
+      "label": "Wholesalers",
+      "description": "Information regarding wholesalers assoicated with this advisor.",
+      "tags": [
+        "group/wholesalers"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "identifiers",
+      "label": "Identifiers",
+      "description": "Information regarding the different ways the advisor is identified by.",
+      "tags": [
+        "group/identifiers"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "signals",
+      "label": "Signals",
+      "description": "Aggregations capturing the advisors involvement with different signals",
+      "tags": [
+        "group/signals"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    }
+  ]
+}

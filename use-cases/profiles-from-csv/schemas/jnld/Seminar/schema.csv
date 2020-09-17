@@ -1,0 +1,12 @@
+attributeKey,description,label,tag1,tag2,tag3,type,valueType,innerType1,innerType2,LinkToOtherProfiles
+AdvisorList,Who are the advisors assoicated with this seminar?,Advisors,group/advisors,attr/observed,,observed,list,jnld/Advisor,,YES
+Seminar-ID,What is the ID of the semianr?,Seminar ID,group/info,attr/declared,,declared,string,,,NO
+Location,Where is the seminar located?,Location,group/venue,attr/declared,,declared,string,,,NO
+Date,What is the date in which the seminar will be held?,Date,group/venue,attr/declared,,declared,datetime,,,NO
+Agenda,What is the agenda of the seminar?,Agenda,group/venue,attr/declared,,declared,string,,,NO
+Speaker,Who is the primary speaker at the seminar?,Speaker,group/venue,attr/declared,,declared,string,,,NO
+Wholesaler-ID,Who is the wholesaler who whosted this seminar?,Wholesaler ID,group/wholesaler,attr/declared,,declared,profile-rel,jnld/Wholesaler,,YES
+EWS-FirstName,What is the first name of the wholesaler who whosted this seminar?,EWS First Name,group/wholesaler,attr/declared,,declared,string,,,NO
+EWS-LastName,What is the last name of the wholesaler who whosted this seminar?,EWS Last Name,group/wholesaler,attr/declared,,declared,string,,,NO
+Account-ID,What is the id of the account associated with this seminar?,Account ID,group/wholesaler,attr/declared,,declared,string,,,NO
+AccountName,What is the name of the account associated with this seminar?,Account Name,group/wholesaler,attr/declared,,declared,string,,,NO
