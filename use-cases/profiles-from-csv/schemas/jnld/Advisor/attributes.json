@@ -75,20 +75,6 @@
       "name": "AgeGrp"
     },
     {
-      "description": "What is the advisor's date of birth?",
-      "label": "DOB",
-      "type": "cortex/attributes-declared",
-      "valueType": {
-        "outerType": "cortex/attribute-value-datetime",
-        "innerTypes": []
-      },
-      "tags": [
-        "group/general",
-        "attr/declared"
-      ],
-      "name": "DOB"
-    },
-    {
       "description": "What is the type of this advisor?",
       "label": "Advisor Type",
       "type": "cortex/attributes-declared",
@@ -160,7 +146,7 @@
     },
     {
       "description": "What is the id of the advisor's account?",
-      "label": "EWS Account ID",
+      "label": "Account ID",
       "type": "cortex/attributes-declared",
       "valueType": {
         "outerType": "cortex/attribute-value-string",
@@ -174,7 +160,7 @@
     },
     {
       "description": "What is the name of the advisor's account?",
-      "label": "EWS Account Name",
+      "label": "Account Name",
       "type": "cortex/attributes-declared",
       "valueType": {
         "outerType": "cortex/attribute-value-string",
@@ -198,7 +184,7 @@
         "group/signals",
         "attr/observed"
       ],
-      "name": "aggs.90d.startdate"
+      "name": "lq1Aggs.startdate"
     },
     {
       "description": "When date do we stop considering signals when doing 90d aggregations?",
@@ -212,7 +198,7 @@
         "group/signals",
         "attr/observed"
       ],
-      "name": "aggs.90d.enddate"
+      "name": "lq1Aggs.enddate"
     },
     {
       "description": "How many unique activities has the advisor performed within the relevant 90d window?",
@@ -226,7 +212,7 @@
         "group/signals",
         "attr/observed"
       ],
-      "name": "aggs.90d.activities.count"
+      "name": "lq1Aggs.activities.count"
     },
     {
       "description": "How many illustrations has the advisor performed within the relevant 90d window?",
@@ -240,7 +226,7 @@
         "group/signals",
         "attr/observed"
       ],
-      "name": "aggs.90d.illustrations.count"
+      "name": "lq1Aggs.illustrations.count"
     },
     {
       "description": "How many appointments has the advisor performed within the relevant 90d window?",
@@ -254,7 +240,7 @@
         "group/signals",
         "attr/observed"
       ],
-      "name": "aggs.90d.appointments.count"
+      "name": "lq1Aggs.appointments.count"
     },
     {
       "description": "How many calls has the advisor performed within the relevant 90d window?",
@@ -268,7 +254,7 @@
         "group/signals",
         "attr/observed"
       ],
-      "name": "aggs.90d.calls.count"
+      "name": "lq1Aggs.calls.count"
     },
     {
       "description": "How much in sales has the advisor performed within the relevant 90d window?",
@@ -282,7 +268,7 @@
         "group/signals",
         "attr/observed"
       ],
-      "name": "aggs.90d.sales.amount"
+      "name": "lq1Aggs.sales.amount"
     },
     {
       "description": "How many unique sales has the advisor performed within the relevant 90d window?",
@@ -296,7 +282,7 @@
         "group/signals",
         "attr/observed"
       ],
-      "name": "aggs.90d.sales.count"
+      "name": "lq1Aggs.sales.count"
     },
     {
       "description": "How many rsvps has the advisor performed within the relevant 90d window?",
@@ -310,7 +296,283 @@
         "group/signals",
         "attr/observed"
       ],
-      "name": "aggs.90d.rsvp.count"
+      "name": "lq1Aggs.rsvp.count"
+    },
+    {
+      "description": "How many times has the advisor called about specific topics within the past 3 months?",
+      "label": "L1Q Called Reasons",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "jnld/CallReason",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/all-products-l1q",
+        "attr/observed"
+      ],
+      "name": "l1qAggs.allProducts.callReason.count"
+    },
+    {
+      "description": "How many times has the advisor called about specific topics within the past 6 months?",
+      "label": "L2Q Called Reasons",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "jnld/CallReason",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/all-products-l2q",
+        "attr/observed"
+      ],
+      "name": "l2qAggs.allProducts.callReason.count"
+    },
+    {
+      "description": "How many times has the advisor called about specific topics within the past 9 months?",
+      "label": "L3Q Called Reasons",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "jnld/CallReason",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/all-products-l3q",
+        "attr/observed"
+      ],
+      "name": "l3qAggs.allProducts.callReason.count"
+    },
+    {
+      "description": "How many times has the advisor called about specific topics within the past year quarter?",
+      "label": "L4Q Called Reasons",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "jnld/CallReason",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/all-products-l4q",
+        "attr/observed"
+      ],
+      "name": "l4qAggs.allProducts.callReason.count"
+    },
+    {
+      "description": "How many times has the advisor called about specific topics within the past 3 months?",
+      "label": "L1Q Called Reasons",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "jnld/CallReason",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/fixed-products-l1q",
+        "attr/observed"
+      ],
+      "name": "l1qAggs.fixedProducts.callReason.count"
+    },
+    {
+      "description": "How many times has the advisor called about specific topics within the past 6 months?",
+      "label": "L2Q Called Reasons",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "jnld/CallReason",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/fixed-products-l2q",
+        "attr/observed"
+      ],
+      "name": "l2qAggs.fixedProducts.callReason.count"
+    },
+    {
+      "description": "How many times has the advisor called about specific topics within the past 9 months?",
+      "label": "L3Q Called Reasons",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "jnld/CallReason",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/fixed-products-l3q",
+        "attr/observed"
+      ],
+      "name": "l3qAggs.fixedProducts.callReason.count"
+    },
+    {
+      "description": "How many times has the advisor called about specific topics within the past year quarter?",
+      "label": "L4Q Called Reasons",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "jnld/CallReason",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/fixed-products-l4q",
+        "attr/observed"
+      ],
+      "name": "l4qAggs.fixedProducts.callReason.count"
+    },
+    {
+      "description": "How many times has the advisor called about specific topics within the past 3 months?",
+      "label": "L1Q Called Reasons",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "jnld/CallReason",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/variable-products-l1q",
+        "attr/observed"
+      ],
+      "name": "l1qAggs.variableProducts.callReason.count"
+    },
+    {
+      "description": "How many times has the advisor called about specific topics within the past 6 months?",
+      "label": "L2Q Called Reasons",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "jnld/CallReason",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/variable-products-l2q",
+        "attr/observed"
+      ],
+      "name": "l2qAggs.variableProducts.callReason.count"
+    },
+    {
+      "description": "How many times has the advisor called about specific topics within the past 9 months?",
+      "label": "L3Q Called Reasons",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "jnld/CallReason",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/variable-products-l3q",
+        "attr/observed"
+      ],
+      "name": "l3qAggs.variableProducts.callReason.count"
+    },
+    {
+      "description": "How many times has the advisor called about specific topics within the past year quarter?",
+      "label": "L4Q Called Reasons",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "jnld/CallReason",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/variable-products-l4q",
+        "attr/observed"
+      ],
+      "name": "l4qAggs.variableProducts.callReason.count"
     }
   ],
   "attributeTags": [
@@ -333,9 +595,57 @@
       "context": "cortex/profile-attribute-tag"
     },
     {
+      "name": "group/all-products-l1q",
+      "label": "all-products-l1q",
+      "description": "group/all-products-l1q",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/all-products-l2q",
+      "label": "all-products-l2q",
+      "description": "group/all-products-l2q",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/all-products-l3q",
+      "label": "all-products-l3q",
+      "description": "group/all-products-l3q",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/all-products-l4q",
+      "label": "all-products-l4q",
+      "description": "group/all-products-l4q",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
       "name": "group/classification",
       "label": "classification",
       "description": "group/classification",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/fixed-products-l1q",
+      "label": "fixed-products-l1q",
+      "description": "group/fixed-products-l1q",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/fixed-products-l2q",
+      "label": "fixed-products-l2q",
+      "description": "group/fixed-products-l2q",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/fixed-products-l3q",
+      "label": "fixed-products-l3q",
+      "description": "group/fixed-products-l3q",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/fixed-products-l4q",
+      "label": "fixed-products-l4q",
+      "description": "group/fixed-products-l4q",
       "context": "cortex/profile-attribute-tag"
     },
     {
@@ -348,6 +658,30 @@
       "name": "group/signals",
       "label": "signals",
       "description": "group/signals",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/variable-products-l1q",
+      "label": "variable-products-l1q",
+      "description": "group/variable-products-l1q",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/variable-products-l2q",
+      "label": "variable-products-l2q",
+      "description": "group/variable-products-l2q",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/variable-products-l3q",
+      "label": "variable-products-l3q",
+      "description": "group/variable-products-l3q",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/variable-products-l4q",
+      "label": "variable-products-l4q",
+      "description": "group/variable-products-l4q",
       "context": "cortex/profile-attribute-tag"
     },
     {
@@ -371,9 +705,21 @@
     {
       "tags": [
         "group/account",
+        "group/all-products-l1q",
+        "group/all-products-l2q",
+        "group/all-products-l3q",
+        "group/all-products-l4q",
         "group/classification",
+        "group/fixed-products-l1q",
+        "group/fixed-products-l2q",
+        "group/fixed-products-l3q",
+        "group/fixed-products-l4q",
         "group/general",
         "group/signals",
+        "group/variable-products-l1q",
+        "group/variable-products-l2q",
+        "group/variable-products-l3q",
+        "group/variable-products-l4q",
         "group/wholesalers"
       ],
       "name": "group",

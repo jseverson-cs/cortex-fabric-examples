@@ -2,13 +2,12 @@ include "cortex-schema-helpers";
 
 def taxonomy_from_record: (
   (
-    (. | tags_from_tag_columns)
+    (. | del(._layout) | tags_from_tag_columns)
     +
     {
       "context": "cortex/profile-attribute-taxonomy"
     }
   )
-
 );
 
 {

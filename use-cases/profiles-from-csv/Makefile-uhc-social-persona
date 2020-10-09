@@ -23,7 +23,7 @@ import_files: switch
 	python download-csv-from-google-sheets.py \
 	  '${GOOGLE_AUTH_SECRET}' \
 	  '${DRIVE_ID}' \
-	  'social-persona-taxonomy!A1:G' > ${SCHEMA_DIR}/taxonomy.csv
+	  'social-persona-taxonomy!A1:H' > ${SCHEMA_DIR}/taxonomy.csv
 	python download-csv-from-google-sheets.py \
       '${GOOGLE_AUTH_SECRET}' \
       '${DRIVE_ID}' \

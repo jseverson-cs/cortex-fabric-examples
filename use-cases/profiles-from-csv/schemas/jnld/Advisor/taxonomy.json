@@ -53,6 +53,156 @@
         "group/signals"
       ],
       "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "products-variable",
+      "label": "Variable Products",
+      "description": "Attributes regarding variable products.",
+      "parent": "signals",
+      "tags": [
+        "group/products-variable"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "products-fixed",
+      "label": "Fixed Products",
+      "description": "Attributes regarding fixed products.",
+      "parent": "signals",
+      "tags": [
+        "group/products-fixed"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "products-all",
+      "label": "All Products",
+      "description": "Attributes regarding all products.",
+      "parent": "signals",
+      "tags": [
+        "group/products-all"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "all-products-l1q",
+      "label": "Last Q Aggs",
+      "description": "Attributes regarding signals over the last quarter for all products",
+      "parent": "products-all",
+      "tags": [
+        "group/all-products-l1q"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "all-products-l2q",
+      "label": "Last 2 Q Aggs",
+      "description": "Attributes regarding signals over the last two quarters for all products",
+      "parent": "products-all",
+      "tags": [
+        "group/all-products-l2q"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "all-products-l3q",
+      "label": "Last 3 Q Aggs",
+      "description": "Attributes regarding signals over the last three quarters for all products",
+      "parent": "products-all",
+      "tags": [
+        "group/all-products-l3q"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "all-products-l4q",
+      "label": "Last 4 Q Aggs",
+      "description": "Attributes regarding signals over the last four quarters for all products",
+      "parent": "products-all",
+      "tags": [
+        "group/all-products-l4q"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "variable-products-l1q",
+      "label": "Last Q Aggs",
+      "description": "Attributes regarding signals over the last quarter for variable products",
+      "parent": "products-variable",
+      "tags": [
+        "group/variable-products-l1q"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "variable-products-l2q",
+      "label": "Last 2 Q Aggs",
+      "description": "Attributes regarding signals over the last two quarters for variable products",
+      "parent": "products-variable",
+      "tags": [
+        "group/variable-products-l2q"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "variable-products-l3q",
+      "label": "Last 3 Q Aggs",
+      "description": "Attributes regarding signals over the last three quarters for variable products",
+      "parent": "products-variable",
+      "tags": [
+        "group/variable-products-l3q"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "variable-products-l4q",
+      "label": "Last 4 Q Aggs",
+      "description": "Attributes regarding signals over the last four quarters for variable products",
+      "parent": "products-variable",
+      "tags": [
+        "group/variable-products-l4q"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "fixed-products-l1q",
+      "label": "Last Q Aggs",
+      "description": "Attributes regarding signals over the last quarter for fixed products",
+      "parent": "products-fixed",
+      "tags": [
+        "group/fixed-products-l1q"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "fixed-products-l2q",
+      "label": "Last 2 Q Aggs",
+      "description": "Attributes regarding signals over the last two quarters for fixed products",
+      "parent": "products-fixed",
+      "tags": [
+        "group/fixed-products-l2q"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "fixed-products-l3q",
+      "label": "Last 3 Q Aggs",
+      "description": "Attributes regarding signals over the last three quarters for fixed products",
+      "parent": "products-fixed",
+      "tags": [
+        "group/fixed-products-l3q"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "fixed-products-l4q",
+      "label": "Last 4 Q Aggs",
+      "description": "Attributes regarding signals over the last four quarters for fixed products",
+      "parent": "products-fixed",
+      "tags": [
+        "group/fixed-products-l4q"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
     }
   ]
 }

@@ -1,17 +1,17 @@
 attributeKey,description,label,tag1,tag2,tag3,type,valueType,innerType1,innerType2,LinkToOtherProfiles,UpdateFrequency
-stories,Which trending social media stories are stories are associated with this persona?,Associated Stories,group/social-intersection,group/social-intersection,attr/inferred,inferred,list,,,NO,Every Week
-keywords,Which keywords are strongly associated with this social persona?,Associated Keywords,group/social-intersection,group/keyword-intersection,attr/inferred,inferred,list,,,NO,Every Week
-intersection.neustar,Which neustar leads are associated with this social persona?,Associated Leads,group/neustar-intersection,group/neustar-intersection,attr/inferred,inferred,list,,,NO,Every Week
-intersection.members,Which UnitedHealthcare members engaged with the keywords assoicated with this peronsa?,Associated Members,group/member-intersection,,attr/inferred,inferred,list,,,NO,Every Week
-intersection.social-media-users,Which Social Mdia users are assoicated with this persona?,Associated Social Users,group/social-intersection,,attr/inferred,inferred,list,,,NO,Every Week
-currently.trending,Is the persona currently trending?,Currently Trending,group/trendiness,,attr/inferred,inferred,boolean,,,NO,Every Week
-scoring.trendiness,How does the trendiness of this personas compare to all of the other personas also trending now?,Trendiness Score,group/trendiness,,attr/inferred,inferred,weight,,,NO,Every Week
-socring.coverage,How wide of a net does this peronsal cast? How many users social media users relate to this peronsa?,Coverage,group/trendiness,,attr/inferred,inferred,number,,,NO,Every Week
-posters.location,Where are the social media users that provide the majority of the content behind this persona located?,Location of Users,group/demographics,,attr/observed,observed,list,,,NO,Every Week
-demographics.age,What ages have been associated with this persona?,Age of Leads,group/demographics,group/campaign-performance-intersection,attr/observed,observed,list,,,NO,Every Week
-demographics.location,What locations have been associated with this persona?,Location of Leads,group/demographics,group/campaign-performance-intersection,attr/observed,observed,list,,,NO,Every Week
-related.campaigns,What campaigns are possibly related to this persona?,Related Campaigns,group/campaign-performance-intersection,,attr/observed,observed,list,,,NO,Every Week
-countOf.convertedLeads,How many UHC Leads did this persona help convert into members?,Total Converted Leads,group/persona-performance,,attr/observed,observed,number,,,NO,Every Week
-convertedLeads,Which current UHC Members were targeted due to this persona during the lead generation phase?,Converted Leads,group/member-intersection,,attr/observed,observed,list,member/Plan_Match,,YES,Every Week
-executedCampaigns,What campaigns have we executed that were influenced by the personas?,Influenced Campaigns,group/campaign-performance-intersection,,attr/observed,observed,list,,,NO,Every Week
-persona-id,What is the id of the persona?,Persona ID,group/info,,attr/declared,declared,string,,,NO,Every Week
+id,What is the id of the persona?,ID,group/info,,attr/declared,declared,string,,,NO,Every Week
+dateGenerated,Where are the social media users that provide the majority of the content behind this persona located?,Date Generated,group/info,,attr/declared,declared,datetime,,,NO,Every Week
+type,How wide of a net does this peronsal cast? How many users social media users relate to this peronsa?,Persona Type,group/info,,attr/declared,declared,string,,,NO,Every Week
+size,How does this size of this social persona compare to other social personas?,Size,group/info,,attr/inferred,inferred,number,,,NO,Every Week
+members,"How many people ""fit"" into this social persona?",# of Leads,group/info,,attr/observed,observed,number,,,NO,Every Week
+keywords,Which keywords are strongly associated with this social persona?,Essential Keywords,group/info,,attr/inferred,inferred,list,,,NO,Every Week
+posts,Which social media post are strongly associated with this social persona?,Essential Posts,group/info,,attr/inferred,inferred,list,,,NO,Every Week
+names.twitterUsers,What are the full names of the members associated with this persona?,Social User Names,group/demographics,,attr/inferred,inferred,list,,,NO,Every Week
+usernames.twitterUsers,What are the twitter handles of the social media users associated with this persona?,Social User Handles,group/social-intersection,,attr/inferred,inferred,list,,,NO,Every Week
+locations.twitterUsers,Where are most of the social media users associated with this peronsa located?,Social User Locations,group/demographics,,attr/inferred,inferred,list,,,NO,Every Week
+professions.twitterUsers,Where is the profession of most of the social media users associated with this peronsa?,Social User Professions,group/demographics,,attr/observed,observed,list,,,NO,Every Week
+gender.twitterUsers,What gender is pre-dominant in this social media persona?,Social User Genders,group/demographics,,attr/observed,observed,list,,,NO,Every Week
+campaigns,What campaigns have we run that target this persona?,Campaigns,group/campaign-performance-intersection,,attr/observed,observed,list,,,NO,Every Week
+sales,How many unique sales has this social media lead to?,# Sales,group/campaign-performance-intersection,,attr/observed,observed,number,,,NO,Every Week
+matches.neustar,How many individuals in neustar does this social media persona map to?,# Neustar Matches,group/neustar-intersection,,attr/observed,observed,number,,,NO,Every Week
+matches.uhc,How many individuals in the UHC data does this social media persona map to?,# UHC Matches,group/uhc-intersection,,attr/observed,observed,number,,,NO,Every Week

@@ -5,3 +5,18 @@ classification,Classification,Information regarding how the advisor is classifie
 wholesalers,Wholesalers,Information regarding wholesalers assoicated with this advisor.,,group/wholesalers
 identifiers,Identifiers,Information regarding the different ways the advisor is identified by.,,group/identifiers
 signals,Signals,Aggregations capturing the advisors involvement with different signals,,group/signals
+products-variable,Variable Products,Attributes regarding variable products.,signals,group/products-variable
+products-fixed,Fixed Products,Attributes regarding fixed products.,signals,group/products-fixed
+products-all,All Products,Attributes regarding all products.,signals,group/products-all
+all-products-l1q,Last Q Aggs,Attributes regarding signals over the last quarter for all products,products-all,group/all-products-l1q
+all-products-l2q,Last 2 Q Aggs,Attributes regarding signals over the last two quarters for all products,products-all,group/all-products-l2q
+all-products-l3q,Last 3 Q Aggs,Attributes regarding signals over the last three quarters for all products,products-all,group/all-products-l3q
+all-products-l4q,Last 4 Q Aggs,Attributes regarding signals over the last four quarters for all products,products-all,group/all-products-l4q
+variable-products-l1q,Last Q Aggs,Attributes regarding signals over the last quarter for variable products,products-variable,group/variable-products-l1q
+variable-products-l2q,Last 2 Q Aggs,Attributes regarding signals over the last two quarters for variable products,products-variable,group/variable-products-l2q
+variable-products-l3q,Last 3 Q Aggs,Attributes regarding signals over the last three quarters for variable products,products-variable,group/variable-products-l3q
+variable-products-l4q,Last 4 Q Aggs,Attributes regarding signals over the last four quarters for variable products,products-variable,group/variable-products-l4q
+fixed-products-l1q,Last Q Aggs,Attributes regarding signals over the last quarter for fixed products,products-fixed,group/fixed-products-l1q
+fixed-products-l2q,Last 2 Q Aggs,Attributes regarding signals over the last two quarters for fixed products,products-fixed,group/fixed-products-l2q
+fixed-products-l3q,Last 3 Q Aggs,Attributes regarding signals over the last three quarters for fixed products,products-fixed,group/fixed-products-l3q
+fixed-products-l4q,Last 4 Q Aggs,Attributes regarding signals over the last four quarters for fixed products,products-fixed,group/fixed-products-l4q

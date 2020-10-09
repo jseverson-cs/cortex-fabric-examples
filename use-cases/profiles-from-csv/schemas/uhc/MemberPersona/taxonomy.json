@@ -17,6 +17,25 @@
         "group/demographics"
       ],
       "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "info",
+      "label": "Info",
+      "description": "General Attributes",
+      "tags": [
+        "group/info"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "location",
+      "label": "Location",
+      "description": "Location Attributes",
+      "parent": "demographics",
+      "tags": [
+        "group/location"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
     }
   ]
 }

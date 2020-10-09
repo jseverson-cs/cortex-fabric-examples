@@ -33,6 +33,136 @@
       "name": "age.deviationFromAverage"
     },
     {
+      "description": "What is the average income of UHC Members in this persona?",
+      "label": "Income",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/demographics",
+        "attr/inferred"
+      ],
+      "name": "income.average"
+    },
+    {
+      "description": "How many thousands of dollars does the average income of members of this persona deviate from the average income of members as a whole?",
+      "label": "Income Deviation",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/demographics",
+        "attr/observed"
+      ],
+      "name": "income.deviationFromAverage"
+    },
+    {
+      "description": "What is the average number of children of UHC Members in this persona?",
+      "label": "Children",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/demographics",
+        "attr/inferred"
+      ],
+      "name": "children.average"
+    },
+    {
+      "description": "How many additional children does the average income of members of this persona deviate from the average number of children of members as a whole?",
+      "label": "Children Deviation",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/demographics",
+        "attr/observed"
+      ],
+      "name": "children.deviationFromAverage"
+    },
+    {
+      "description": "Of the locations of UHC Members in this persona, how many of them are urban?",
+      "label": "Urban Pop Percentage",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-percentage",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/location",
+        "attr/inferred"
+      ],
+      "name": "urbanLocations.occurance"
+    },
+    {
+      "description": "How does the percentage of urban locations of members of this persona differ from the percentage of urban locations of members as a whole?",
+      "label": "Urban Pop Deviation",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/location",
+        "attr/observed"
+      ],
+      "name": "urbanLocations.deviation"
+    },
+    {
+      "description": "For each region in the US, what percentage of the members in this persona live in that particular region?",
+      "label": "Region Occurance",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/location",
+        "attr/inferred"
+      ],
+      "name": "region.occurance"
+    },
+    {
+      "description": "For each region in the US, how does the percentage of members that live in that region in the persona compare with the percentage of members that generally live in that region?",
+      "label": "Region Deviation",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/location",
+        "attr/observed"
+      ],
+      "name": "region.deviation"
+    },
+    {
       "description": "For each channel, what percentage of the members in this persona were acquired through that channel?",
       "label": "Channel Occurance",
       "type": "cortex/attributes-inferred",
@@ -79,8 +209,8 @@
       "name": "channel.deviation"
     },
     {
-      "description": "For each different family status, what percentage of the members in this persona share the same family status?",
-      "label": "Channel Occurance",
+      "description": "For each of the different marital statuses, what percentage of the members in this persona share the same marital status?",
+      "label": "Marital Status Occurance",
       "type": "cortex/attributes-inferred",
       "valueType": {
         "outerType": "cortex/attribute-value-dimensional",
@@ -99,11 +229,11 @@
         "group/demographics",
         "attr/inferred"
       ],
-      "name": "familyStatus.occurance"
+      "name": "maritalStatus.occurance"
     },
     {
-      "description": "For each different family status, how does the percentage of members that share the same family status within the persona compare with percentage of members that generally share the same family status?",
-      "label": "Channel Deviation",
+      "description": "For each of the different marital statuses, how does the percentage of members that share the same marital statuses within the persona compare with percentage of members that generally share the same marital statuses?",
+      "label": "Marital Status Deviation",
       "type": "cortex/attributes-observed",
       "valueType": {
         "outerType": "cortex/attribute-value-dimensional",
@@ -122,7 +252,7 @@
         "group/demographics",
         "attr/observed"
       ],
-      "name": "familyStatus.deviation"
+      "name": "maritalStatus.deviation"
     },
     {
       "description": "For each different gender, what percentage of the members in this persona share the same gender?",
@@ -169,6 +299,126 @@
         "attr/observed"
       ],
       "name": "gender.deviation"
+    },
+    {
+      "description": "For each different educational status, what percentage of the members in this persona share the same educational status?",
+      "label": "Education Occurance",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/demographics",
+        "attr/inferred"
+      ],
+      "name": "education.occurance"
+    },
+    {
+      "description": "For each different educational status, how does the percentage of members that share the same gender within the persona compare with percentage of members that generally share the same educational status?",
+      "label": "Education Deviation",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/demographics",
+        "attr/observed"
+      ],
+      "name": "education.deviation"
+    },
+    {
+      "description": "For each different occupation, what percentage of the members in this persona share the same occupation?",
+      "label": "Occupation Occurance",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/demographics",
+        "attr/inferred"
+      ],
+      "name": "occupation.occurance"
+    },
+    {
+      "description": "For each different occupation, how does the percentage of members that share the same occupation within the persona compare with percentage of members that generally share the same occupation?",
+      "label": "Occupation Deviation",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-dimensional",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          },
+          {
+            "outerType": "cortex/attribute-value-number",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "group/demographics",
+        "attr/observed"
+      ],
+      "name": "occupation.deviation"
+    },
+    {
+      "description": "What percentage of UHC members fall within this persona?",
+      "label": "Size",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-percentage",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/info",
+        "attr/inferred"
+      ],
+      "name": "size"
+    },
+    {
+      "description": "How can this persona be described in plain english?",
+      "label": "Description",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "group/info",
+        "attr/inferred"
+      ],
+      "name": "description"
     }
   ],
   "attributeTags": [
@@ -195,6 +445,18 @@
       "label": "demographics",
       "description": "group/demographics",
       "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/info",
+      "label": "info",
+      "description": "group/info",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "group/location",
+      "label": "location",
+      "description": "group/location",
+      "context": "cortex/profile-attribute-tag"
     }
   ],
   "facets": [
@@ -211,7 +473,9 @@
     {
       "tags": [
         "group/channel",
-        "group/demographics"
+        "group/demographics",
+        "group/info",
+        "group/location"
       ],
       "name": "group",
       "label": "group",
@@ -235,6 +499,25 @@
       "description": "Demographic Attributes",
       "tags": [
         "group/demographics"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "info",
+      "label": "Info",
+      "description": "General Attributes",
+      "tags": [
+        "group/info"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "location",
+      "label": "Location",
+      "description": "Location Attributes",
+      "parent": "demographics",
+      "tags": [
+        "group/location"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     }

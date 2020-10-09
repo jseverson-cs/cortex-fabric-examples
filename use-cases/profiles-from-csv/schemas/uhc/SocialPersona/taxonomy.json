@@ -3,6 +3,7 @@
     {
       "name": "info",
       "label": "Info",
+      "description": "info",
       "tags": [
         "group/info"
       ],
@@ -11,6 +12,7 @@
     {
       "name": "intersection",
       "label": "Intersections",
+      "description": "intersection",
       "tags": [
         "group/intersetion"
       ],
@@ -20,6 +22,7 @@
       "name": "social-intersection",
       "label": "Social",
       "parent": "intersection",
+      "description": "social-intersection",
       "tags": [
         "group/social-intersection"
       ],
@@ -29,6 +32,7 @@
       "name": "neustar-intersection",
       "label": "Neustar",
       "parent": "intersection",
+      "description": "neustar-intersection",
       "tags": [
         "group/neustar-intersection"
       ],
@@ -38,17 +42,9 @@
       "name": "uhc-intersection",
       "label": "UnitedHealthcare",
       "parent": "intersection",
+      "description": "uhc-intersection",
       "tags": [
         "group/uhc-intersection"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
-    },
-    {
-      "name": "keyword-intersection",
-      "label": "UHC Keywords",
-      "parent": "uhc-intersection",
-      "tags": [
-        "group/keyword-intersection"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
@@ -56,23 +52,16 @@
       "name": "campaign-performance-intersection",
       "label": "UHC Campaigns",
       "parent": "uhc-intersection",
+      "description": "campaign-performance-intersection",
       "tags": [
         "group/campaign-performance-intersection"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     },
     {
-      "name": "member-intersection",
-      "label": "UHC Members",
-      "parent": "uhc-intersection",
-      "tags": [
-        "group/member-intersection"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
-    },
-    {
       "name": "trendiness",
       "label": "Trendiness",
+      "description": "trendiness",
       "tags": [
         "group/trendiness"
       ],
@@ -81,16 +70,9 @@
     {
       "name": "demographics",
       "label": "Demographics",
+      "description": "demographics",
       "tags": [
         "group/demographics"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
-    },
-    {
-      "name": "performance",
-      "label": "Performance",
-      "tags": [
-        "group/persona-performance"
       ],
       "context": "cortex/profile-attribute-taxonomy"
     }

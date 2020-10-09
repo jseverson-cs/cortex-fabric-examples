@@ -1,3 +1,5 @@
 name,label,description,parent,tag1
 channel,Channel,Channel Attributes,,group/channel
 demographics,Demographics,Demographic Attributes,,group/demographics
+info,Info,General Attributes,,group/info
+location,Location,Location Attributes,demographics,group/location
