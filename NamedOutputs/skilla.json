@@ -1,0 +1,69 @@
+{
+  "camel": "1.0.0",
+  "name": "skill-a",
+  "title": "Skill A",
+  "description": "...",
+  "properties": [
+    {
+      "validValues": [],
+      "name": "daemon.method",
+      "title": "Daemon method",
+      "description": "method",
+      "required": true,
+      "type": "string",
+      "defaultValue": "POST",
+      "secure": false
+    },
+    {
+      "validValues": [],
+      "name": "daemon.path",
+      "title": "Daemon path",
+      "description": "path",
+      "required": true,
+      "type": "string",
+      "defaultValue": "skills/a",
+      "secure": false
+    },
+    {
+      "validValues": [],
+      "name": "daemon.port",
+      "title": "Daemon port",
+      "description": "port",
+      "required": true,
+      "type": "number",
+      "defaultValue": "5000",
+      "secure": false
+    }
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "title": "input",
+      "parameters": [
+        {
+          "name": "claim_id",
+          "title": "Number",
+          "type": "number",
+          "required": false
+        }
+      ],
+      "routing": {
+        "all": {
+          "action": "errorHandler",
+          "output": "output",
+          "runtime": "cortex/daemons"
+        }
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "name": "success",
+      "title": "success response"
+    },
+    {
+      "name": "error",
+      "title": "error response"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "camel": "1.0.0",
+  "name": "errorHandler",
+  "title": "error handler",
+  "description": "...",
+  "properties": [
+    {
+      "validValues": [],
+      "name": "daemon.method",
+      "title": "Daemon method",
+      "description": "method",
+      "required": true,
+      "type": "string",
+      "defaultValue": "POST",
+      "secure": false
+    },
+    {
+      "validValues": [],
+      "name": "daemon.path",
+      "title": "Daemon path",
+      "description": "path",
+      "required": true,
+      "type": "string",
+      "defaultValue": "error",
+      "secure": false
+    },
+    {
+      "validValues": [],
+      "name": "daemon.port",
+      "title": "Daemon port",
+      "description": "port",
+      "required": true,
+      "type": "number",
+      "defaultValue": "5000",
+      "secure": false
+    }
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "title": "input",
+      "routing": {
+        "all": {
+          "action": "errorHandler",
+          "output": "output",
+          "runtime": "cortex/daemons"
+        }
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "title": "response"
+    }
+  ],
+  "tags": [],
+  "datasets": []
+}

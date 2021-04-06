@@ -1,0 +1,9 @@
+{
+  "command": [],
+  "name": "errorHandler",
+  "description": "",
+  "image": "errorhandler",
+  "port": "5000",
+  "type": "daemon",
+  "scaleCount": 1
+}

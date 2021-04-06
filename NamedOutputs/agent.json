@@ -1,0 +1,210 @@
+{
+  "camel": "1.0.0",
+  "name": "error-handling-4c010",
+  "title": "Error handling agent",
+  "inputs": [
+    {
+      "signalType": "Service",
+      "name": "input",
+      "title": "input",
+      "signalId": "6acd0df1-1235-49b5-8c7f-b539759a136b",
+      "parameters": [
+        {
+          "name": "claim_id",
+          "required": true,
+          "title": "claim_id",
+          "type": "number"
+        }
+      ],
+      "output": "input"
+    }
+  ],
+  "outputs": [
+    {
+      "signalType": "Service",
+      "name": "input",
+      "title": "output",
+      "signalId": "645f92d2-9727-4661-a1aa-573318b6214d",
+      "parameters": [
+        {
+          "name": "output",
+          "required": false,
+          "title": "output",
+          "type": "object"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "properties": [],
+      "skillName": "skill-a",
+      "title": "Skill A",
+      "description": "...",
+      "refId": "8766f210-67e6-4057-92b4-0417cffabcca",
+      "_layout": {
+        "cellIndex": 60
+      }
+    },
+    {
+      "properties": [],
+      "skillName": "errorHandler",
+      "title": "error handler",
+      "description": "...",
+      "refId": "da8268db-3eb0-4e5d-88a3-7ebddf945986",
+      "_layout": {
+        "cellIndex": 72
+      }
+    },
+    {
+      "properties": [],
+      "skillName": "skill-b",
+      "title": "Skill B",
+      "description": "...",
+      "refId": "6bf77b5b-2a2a-48d8-a866-15e55ad8d5ea",
+      "_layout": {
+        "cellIndex": 64
+      }
+    },
+    {
+      "properties": [],
+      "skillName": "skill-c",
+      "title": "Skill C",
+      "description": "...",
+      "refId": "9f262575-bad5-4c60-8f15-e1ef06191411",
+      "_layout": {
+        "cellIndex": 68
+      }
+    }
+  ],
+  "mappings": [
+    {
+      "from": {
+        "input": {
+          "signalId": "6acd0df1-1235-49b5-8c7f-b539759a136b"
+        }
+      },
+      "to": {
+        "skill": {
+          "refId": "8766f210-67e6-4057-92b4-0417cffabcca",
+          "input": "input"
+        }
+      },
+      "rules": [
+        {
+          "source": {
+            "parameter": "claim_id"
+          },
+          "target": {
+            "parameter": "claim_id"
+          },
+          "_id": "6067735fb9af173e915ec65f"
+        }
+      ]
+    },
+    {
+      "from": {
+        "skill": {
+          "refId": "8766f210-67e6-4057-92b4-0417cffabcca",
+          "output": "error"
+        }
+      },
+      "to": {
+        "skill": {
+          "refId": "da8268db-3eb0-4e5d-88a3-7ebddf945986",
+          "input": "input"
+        }
+      },
+      "rules": []
+    },
+    {
+      "from": {
+        "skill": {
+          "refId": "da8268db-3eb0-4e5d-88a3-7ebddf945986",
+          "output": "output"
+        }
+      },
+      "to": {
+        "output": {
+          "signalId": "645f92d2-9727-4661-a1aa-573318b6214d"
+        }
+      },
+      "rules": []
+    },
+    {
+      "from": {
+        "skill": {
+          "refId": "6bf77b5b-2a2a-48d8-a866-15e55ad8d5ea",
+          "output": "error"
+        }
+      },
+      "to": {
+        "skill": {
+          "refId": "da8268db-3eb0-4e5d-88a3-7ebddf945986",
+          "input": "input"
+        }
+      },
+      "rules": []
+    },
+    {
+      "from": {
+        "skill": {
+          "refId": "9f262575-bad5-4c60-8f15-e1ef06191411",
+          "output": "error"
+        }
+      },
+      "to": {
+        "skill": {
+          "refId": "da8268db-3eb0-4e5d-88a3-7ebddf945986",
+          "input": "input"
+        }
+      },
+      "rules": []
+    },
+    {
+      "from": {
+        "skill": {
+          "refId": "8766f210-67e6-4057-92b4-0417cffabcca",
+          "output": "success"
+        }
+      },
+      "to": {
+        "skill": {
+          "refId": "6bf77b5b-2a2a-48d8-a866-15e55ad8d5ea",
+          "input": "success"
+        }
+      },
+      "rules": []
+    },
+    {
+      "from": {
+        "skill": {
+          "refId": "6bf77b5b-2a2a-48d8-a866-15e55ad8d5ea",
+          "output": "success"
+        }
+      },
+      "to": {
+        "skill": {
+          "refId": "9f262575-bad5-4c60-8f15-e1ef06191411",
+          "input": "success"
+        }
+      },
+      "rules": []
+    },
+    {
+      "from": {
+        "skill": {
+          "refId": "9f262575-bad5-4c60-8f15-e1ef06191411",
+          "output": "output"
+        }
+      },
+      "to": {
+        "output": {
+          "signalId": "645f92d2-9727-4661-a1aa-573318b6214d"
+        }
+      },
+      "rules": []
+    }
+  ],
+  "properties": []
+}
