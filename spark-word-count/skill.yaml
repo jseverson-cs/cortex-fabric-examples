@@ -1,0 +1,40 @@
+camel: 1.0.0
+name: spark-word-count
+title: spark-word-count
+description: Word count skill using the spark processing
+inputs:
+  - name: params
+    title: input
+    parameters:
+      - name: params
+        type: object
+        description: Input Params
+        required: true
+    routing:
+      all:
+        action  : spark-word-count
+        runtime: cortex/jobs
+        output: response
+
+outputs:
+  - name: response
+    title: Job result
+    parameters:
+      - name: result
+        type: object
+        description: Job Execution Logs
+        required: true
+
+properties:
+  - name: aws-key
+    title: AWS Key
+    description: AWS Key used to read and write files to S3 buckets
+    required: true
+    type: string
+  - name: aws-secret
+    title: AWS Secret
+    description: AWS Secret used to read and write files to S3 buckets.
+    required: true
+    type: string
+    secure: false
+    defaultValue: aws-secret
